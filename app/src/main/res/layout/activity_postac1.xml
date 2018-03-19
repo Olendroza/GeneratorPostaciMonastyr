@@ -52,49 +52,49 @@
                         android:id="@+id/wspG1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Budowa: 0"
+                        android:text="Budowa:"
                         android:textColor="#ffff" />
                     <TextView
                         android:id="@+id/wspG2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Spryt: 0"
+                        android:text="Zręczność:"
                         android:textColor="#ffff" />
                     <TextView
                         android:id="@+id/wspG3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Wspolczynnik glowny : 0"
+                        android:text="Spryt:"
                         android:textColor="#ffff" />
                     <TextView
                         android:id="@+id/wspG4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Wspolczynnik glowny : 0"
+                        android:text="Spostrzegawczość"
                         android:textColor="#ffff" />
                     <TextView
                         android:id="@+id/wspG5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Wspolczynnik glowny : 0"
+                        android:text="Wiarygodność"
                         android:textColor="#ffff" />
                     <TextView
                         android:id="@+id/wspG6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Wspolczynnik glowny : 0"
+                        android:text="Opanowanie"
                         android:textColor="#ffff" />
                     <TextView
                         android:id="@+id/wspG7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Wspolczynnik glowny : 0"
+                        android:text="Wytrwałość"
                         android:textColor="#ffff" />
                     <TextView
                         android:id="@+id/wspG8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Wspolczynnik glowny : 0"
+                        android:text="Wiara"
                         android:textColor="#ffff" />
                 </LinearLayout>
 
@@ -108,7 +108,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentTop="true"
-                        android:text="Rany: 0"
+                        android:text="Rany  "
                         android:textColor="#ffff" />
 
                     <LinearLayout
@@ -122,42 +122,42 @@
                             android:id="@+id/wspP1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0 : Wspolczynnik Pomocniczy"
+                            android:text="Refleks"
                             android:textColor="#ffff" />
 
                         <TextView
                             android:id="@+id/wspP2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0 : Wspolczynnik Pomocniczy"
+                            android:text="Autorytet"
                             android:textColor="#ffff" />
 
                         <TextView
                             android:id="@+id/wspP3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0 : Wspolczynnik Pomocniczy"
+                            android:text="Wiedza Oglolna"
                             android:textColor="#ffff" />
 
                         <TextView
                             android:id="@+id/wspP4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0 : Wspolczynnik Pomocniczy"
+                            android:text="Fechtunek"
                             android:textColor="#ffff" />
 
                         <TextView
                             android:id="@+id/wspP5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0 : Wspolczynnik Pomocniczy"
+                            android:text="Strzelanie"
                             android:textColor="#ffff" />
 
                         <TextView
                             android:id="@+id/wspP6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0 : Wspolczynnik Pomocniczy"
+                            android:text="Dusza"
                             android:textColor="#ffff" />
 
                     </LinearLayout>
