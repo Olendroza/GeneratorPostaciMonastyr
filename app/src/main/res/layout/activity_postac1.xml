@@ -143,7 +143,7 @@
                         android:layout_height="wrap_content"
                         android:text="0"/>
                     <Button
-                        android:id="@+id/wspGValue18"
+                        android:id="@+id/wspGValue8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"/>
@@ -169,32 +169,32 @@
                         android:layout_alignParentBottom="true">
 
                         <Button
-                            android:id="@+id/wspP1Value"
+                            android:id="@+id/wspPValue1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"/>
                         <Button
-                            android:id="@+id/wspP2Value"
+                            android:id="@+id/wspPValue2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"/>
                         <Button
-                            android:id="@+id/wspP3Value"
+                            android:id="@+id/wspPValue3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"/>
                         <Button
-                            android:id="@+id/wspP4Value"
+                            android:id="@+id/wspPValue4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"/>
                         <Button
-                            android:id="@+id/wspP5Value"
+                            android:id="@+id/wspPValue5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"/>
                         <Button
-                            android:id="@+id/wspP6Value"
+                            android:id="@+id/wspPValue6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"/>
