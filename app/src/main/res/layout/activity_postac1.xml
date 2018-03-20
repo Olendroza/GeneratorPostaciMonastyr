@@ -149,57 +149,66 @@
 
 
                 </LinearLayout> <!--Main factors values buttons-->
-                <LinearLayout
-                    android:orientation="vertical"
+                <RelativeLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1">
                     <Button
                         android:id="@+id/ranyValue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"/>
-                    <Button
-                        android:id="@+id/wspP1Value"
-                        android:layout_width="wrap_content"
+                        android:text="0"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"/>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="0"/>
-                    <Button
-                        android:id="@+id/wspP2Value"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"/>
-                    <Button
-                        android:id="@+id/wspP3Value"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"/>
-                    <Button
-                        android:id="@+id/wspP4Value"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"/>
-                    <Button
-                        android:id="@+id/wspP5Value"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"/>
-                    <Button
-                        android:id="@+id/wspP6Value"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"/>
+                        android:layout_alignParentBottom="true">
+
+                        <Button
+                            android:id="@+id/wspP1Value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                        <Button
+                            android:id="@+id/wspP2Value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                        <Button
+                            android:id="@+id/wspP3Value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                        <Button
+                            android:id="@+id/wspP4Value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                        <Button
+                            android:id="@+id/wspP5Value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                        <Button
+                            android:id="@+id/wspP6Value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
 
 
 
-                </LinearLayout> <!--Auxiliary factors values buttons-->
+                    </LinearLayout>
+                </RelativeLayout><!--Auxiliary factors values buttons-->
+
                 <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="5">
 
                     <Button
-                        android:id="@+id/Rany"
+                        android:id="@+id/rany"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
