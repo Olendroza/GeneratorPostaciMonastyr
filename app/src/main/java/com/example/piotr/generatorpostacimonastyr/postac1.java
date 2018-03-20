@@ -40,7 +40,35 @@ public class postac1 extends AppCompatActivity {
             }
 
         }
+        public void addOne(View view){
+        Button buttonClicked = findViewById(view.getId());
+        String id = view.getResources().getResourceName(view.getId());
+        int numberOfFactor = Integer.parseInt(id.substring(id.length()-1))-1;
+            if(id.contains("wspG")){
+                this.character.WspolczynnikiGlowne[numberOfFactor]++;
+                buttonClicked.setText(Integer.toString(this.character.WspolczynnikiGlowne[numberOfFactor]));
+            }
 
+            else{
+                this.character.WspolczynnikiPomocnicze[numberOfFactor]++;
+                buttonClicked.setText(Integer.toString(this.character.WspolczynnikiPomocnicze[numberOfFactor]));
+            }
+        }
+    public void subtractOne(View view){
+        String id = view.getResources().getResourceName(view.getId());
+        String newId = id.substring(0,id.length()-1)+"Value"+id.substring(id.length()-1);
+        int numberOfFactor = Integer.parseInt(id.substring(id.length()-1))-1;
+        Button buttonValue = findViewById(getResources().getIdentifier(newId,"id",getPackageName()));
+        if(id.contains("wspG")){
+            this.character.WspolczynnikiGlowne[numberOfFactor]--;
+            buttonValue.setText(Integer.toString(this.character.WspolczynnikiGlowne[numberOfFactor]));
+        }
+
+        else{
+            this.character.WspolczynnikiPomocnicze[numberOfFactor]--;
+            buttonValue.setText(Integer.toString(this.character.WspolczynnikiPomocnicze[numberOfFactor]));
+        }
+    }
 
 
     }

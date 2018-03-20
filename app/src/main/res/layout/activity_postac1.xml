@@ -57,48 +57,63 @@
                         android:id="@+id/wspG1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:onClick="subtractOne"
                         android:text="Budowa:"
                         android:textColor="#ffff" />
+
                     <Button
                         android:id="@+id/wspG2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:onClick="subtractOne"
                         android:text="Zręczność:"
                         android:textColor="#ffff" />
+
                     <Button
                         android:id="@+id/wspG3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:onClick="subtractOne"
                         android:text="Spryt:"
                         android:textColor="#ffff" />
+
                     <Button
                         android:id="@+id/wspG4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:onClick="subtractOne"
                         android:text="Spostrzegawczość"
                         android:textColor="#ffff" />
+
                     <Button
                         android:id="@+id/wspG5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:onClick="subtractOne"
                         android:text="Wiarygodność"
                         android:textColor="#ffff" />
+
                     <Button
                         android:id="@+id/wspG6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:onClick="subtractOne"
                         android:text="Opanowanie"
                         android:textColor="#ffff" />
+
                     <Button
                         android:id="@+id/wspG7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:onClick="subtractOne"
                         android:text="Wytrwałość"
                         android:textColor="#ffff" />
+
                     <Button
                         android:id="@+id/wspG8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:onClick="subtractOne"
                         android:text="Wiara"
                         android:textColor="#ffff" />
                 </LinearLayout> <!--Main factors-->
@@ -107,47 +122,63 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
+
                     <Button
                         android:id="@+id/wspGValue1"
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
-                        android:text="0"
-                        android:maxLines="1"/>
+                        android:maxLines="1"
+                        android:onClick="addOne"
+                        android:text="0" />
+
                     <Button
                         android:id="@+id/wspGValue2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"/>
+                        android:onClick="addOne"
+                        android:text="0" />
+
                     <Button
                         android:id="@+id/wspGValue3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"/>
+                        android:onClick="addOne"
+                        android:text="0" />
+
                     <Button
                         android:id="@+id/wspGValue4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"/>
+                        android:onClick="addOne"
+                        android:text="0" />
+
                     <Button
                         android:id="@+id/wspGValue5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"/>
+                        android:onClick="addOne"
+                        android:text="0" />
+
                     <Button
                         android:id="@+id/wspGValue6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"/>
+                        android:onClick="addOne"
+                        android:text="0" />
+
                     <Button
                         android:id="@+id/wspGValue7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"/>
+                        android:onClick="addOne"
+                        android:text="0" />
+
                     <Button
                         android:id="@+id/wspGValue8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"/>
+                        android:onClick="addOne"
+                        android:text="0" />
 
 
 
@@ -173,32 +204,43 @@
                             android:id="@+id/wspPValue1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0"/>
+                            android:onClick="addOne"
+                            android:text="0" />
+
                         <Button
                             android:id="@+id/wspPValue2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0"/>
+                            android:onClick="addOne"
+                            android:text="0" />
+
                         <Button
                             android:id="@+id/wspPValue3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0"/>
+                            android:onClick="addOne"
+                            android:text="0" />
+
                         <Button
                             android:id="@+id/wspPValue4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0"/>
+                            android:onClick="addOne"
+                            android:text="0" />
+
                         <Button
                             android:id="@+id/wspPValue5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0"/>
+                            android:onClick="addOne"
+                            android:text="0" />
+
                         <Button
                             android:id="@+id/wspPValue6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0"/>
+                            android:onClick="addOne"
+                            android:text="0" />
 
 
 
@@ -226,10 +268,12 @@
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentEnd="true"
                         android:gravity="right">
+
                         <Button
                             android:id="@+id/wspP1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:onClick="subtractOne"
                             android:text="Refleks"
                             android:textColor="#ffff" />
 
@@ -237,6 +281,7 @@
                             android:id="@+id/wspP2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:onClick="subtractOne"
                             android:text="Autorytet"
                             android:textColor="#ffff" />
 
@@ -244,6 +289,7 @@
                             android:id="@+id/wspP3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:onClick="subtractOne"
                             android:text="Wiedza Oglolna"
                             android:textColor="#ffff" />
 
@@ -251,6 +297,7 @@
                             android:id="@+id/wspP4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:onClick="subtractOne"
                             android:text="Fechtunek"
                             android:textColor="#ffff" />
 
@@ -258,6 +305,7 @@
                             android:id="@+id/wspP5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:onClick="subtractOne"
                             android:text="Strzelanie"
                             android:textColor="#ffff" />
 
@@ -265,6 +313,7 @@
                             android:id="@+id/wspP6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:onClick="subtractOne"
                             android:text="Dusza"
                             android:textColor="#ffff" />
 
