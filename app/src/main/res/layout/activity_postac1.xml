@@ -29,80 +29,96 @@
                 android:layout_height="wrap_content"
                 android:text="Tytul"
                 android:textColor="#FFFF"
-                android:layout_alignParentTop="true"/>
+                android:layout_alignParentTop="true"/><!--title-->
             <TextView
                 android:id="@+id/imie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Imie Postaci"
                 android:textColor="#ffff"
-                android:layout_below="@+id/tytul"/>
+                android:layout_below="@+id/tytul"/><!--name-->
             <LinearLayout
                 android:orientation="horizontal"
                 android:id="@+id/LinLayWsp"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/imie">
+                android:layout_below="@+id/imie"
+                android:weightSum="12">
                 <LinearLayout
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5">
 
-                    <TextView
+                    <Button
                         android:id="@+id/wspG1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Budowa:"
                         android:textColor="#ffff" />
-                    <TextView
+                    <Button
                         android:id="@+id/wspG2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Zręczność:"
                         android:textColor="#ffff" />
-                    <TextView
+                    <Button
                         android:id="@+id/wspG3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Spryt:"
                         android:textColor="#ffff" />
-                    <TextView
+                    <Button
                         android:id="@+id/wspG4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Spostrzegawczość"
                         android:textColor="#ffff" />
-                    <TextView
+                    <Button
                         android:id="@+id/wspG5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Wiarygodność"
                         android:textColor="#ffff" />
-                    <TextView
+                    <Button
                         android:id="@+id/wspG6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Opanowanie"
                         android:textColor="#ffff" />
-                    <TextView
+                    <Button
                         android:id="@+id/wspG7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Wytrwałość"
                         android:textColor="#ffff" />
-                    <TextView
+                    <Button
                         android:id="@+id/wspG8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Wiara"
                         android:textColor="#ffff" />
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
 
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+
+                </LinearLayout>
                 <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5">
 
-                    <TextView
+                    <Button
                         android:id="@+id/Rany"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -114,46 +130,45 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:orientation="vertical"
                         android:layout_alignParentBottom="true"
-                        android:layout_alignParentEnd="true"
-                        android:orientation="vertical">
-
-                        <TextView
+                        android:layout_alignParentEnd="true">
+                        <Button
                             android:id="@+id/wspP1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Refleks"
                             android:textColor="#ffff" />
 
-                        <TextView
+                        <Button
                             android:id="@+id/wspP2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Autorytet"
                             android:textColor="#ffff" />
 
-                        <TextView
+                        <Button
                             android:id="@+id/wspP3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Wiedza Oglolna"
                             android:textColor="#ffff" />
 
-                        <TextView
+                        <Button
                             android:id="@+id/wspP4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Fechtunek"
                             android:textColor="#ffff" />
 
-                        <TextView
+                        <Button
                             android:id="@+id/wspP5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Strzelanie"
                             android:textColor="#ffff" />
 
-                        <TextView
+                        <Button
                             android:id="@+id/wspP6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
