@@ -45,12 +45,12 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/imie"
-                android:weightSum="12">
+                android:weightSum="10">
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="5">
+                    android:layout_weight="4">
 
                     <Button
 
@@ -109,9 +109,10 @@
                     android:layout_weight="1">
                     <Button
                         android:id="@+id/wspGValue1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="0"
+                        android:maxLines="1"/>
                     <Button
                         android:id="@+id/wspGValue2"
                         android:layout_width="wrap_content"
@@ -207,7 +208,7 @@
                 <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="5">
+                    android:layout_weight="4">
 
                     <Button
                         android:id="@+id/rany"
