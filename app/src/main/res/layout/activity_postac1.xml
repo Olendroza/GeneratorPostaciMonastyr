@@ -99,21 +99,100 @@
                         android:layout_height="wrap_content"
                         android:text="Wiara"
                         android:textColor="#ffff" />
-                </LinearLayout>
+                </LinearLayout> <!--Main factors-->
                 <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
+                    <Button
+                        android:id="@+id/wspGValue1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
+                    <Button
+                        android:id="@+id/wspGValue2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
+                    <Button
+                        android:id="@+id/wspGValue3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
+                    <Button
+                        android:id="@+id/wspGValue4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
+                    <Button
+                        android:id="@+id/wspGValue5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
+                    <Button
+                        android:id="@+id/wspGValue6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
+                    <Button
+                        android:id="@+id/wspGValue7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
+                    <Button
+                        android:id="@+id/wspGValue18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
 
 
-                </LinearLayout>
+
+                </LinearLayout> <!--Main factors values buttons-->
                 <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
+                    <Button
+                        android:id="@+id/ranyValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
+                    <Button
+                        android:id="@+id/wspP1Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
+                    <Button
+                        android:id="@+id/wspP2Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
+                    <Button
+                        android:id="@+id/wspP3Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
+                    <Button
+                        android:id="@+id/wspP4Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
+                    <Button
+                        android:id="@+id/wspP5Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
+                    <Button
+                        android:id="@+id/wspP6Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"/>
 
 
-                </LinearLayout>
+
+                </LinearLayout> <!--Auxiliary factors values buttons-->
                 <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -178,7 +257,7 @@
                             android:textColor="#ffff" />
 
                     </LinearLayout>
-                </RelativeLayout>
+                </RelativeLayout><!--Auxiliary factors and wounds-->
 
             </LinearLayout>
 
