@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 public class postac1 extends AppCompatActivity {
 
@@ -25,6 +26,38 @@ public class postac1 extends AppCompatActivity {
         Button[] mainFactorValue = new Button[8];
         Button[] auxiliaryFactorValue = new Button[6];
         Button[] abilities = new Button[22];
+        Button[] motion = new Button[4];
+        Button[] rapierA = new Button[7];
+        Button[] rapierD = new Button[4];
+        Button[] closeC = new Button[2];
+
+        closeC[0]=findViewById(R.id.cCombatA);
+        closeC[0].setText(Integer.toString(character.AkcjeZwarcie[0]));
+
+        closeC[1]=findViewById(R.id.cCombatD);
+        closeC[1].setText(Integer.toString(character.AkcjeZwarcie[1]));
+
+        motion[0]=findViewById(R.id.motionAValue);
+        motion[0].setText(Integer.toString(character.AkcjeRuch[0]));
+        for(int i=1;i<motion.length;i++){
+            String source = "motionD" + Integer.toString(i-1)+"Value";
+            int id = getResources().getIdentifier(source,"id",getPackageName());
+            motion[i]=findViewById(id);
+            motion[i].setText(Integer.toString(character.AkcjeRuch[i]));
+        }
+        //<!--debagowac-->
+        for(int i=0;i<rapierA.length;i++){
+            String source = "rapierA"+Integer.toString(i)+"Value";
+            int id = getResources().getIdentifier(source,"id",getPackageName());
+            rapierA[i]=findViewById(id);
+            rapierA[i].setText(Integer.toString(character.AkcjeRapierAtak[i]));
+        }
+        for(int i=0;i<rapierD.length;i++){
+            String source = "rapierD"+Integer.toString(i)+"Value";
+            int id = getResources().getIdentifier(source,"id",getPackageName());
+            rapierD[i]=findViewById(id);
+            rapierD[i].setText(Integer.toString(character.AkcjeRapierObrona[i]));
+        }
             for (int i = 0; i < mainFactorValue.length; i++) {
                 String source = "wspGValue" + Integer.toString(i + 1);
                 int id = getResources().getIdentifier(source, "id", getPackageName());
@@ -42,7 +75,7 @@ public class postac1 extends AppCompatActivity {
                 int id = getResources().getIdentifier(source,"id",getPackageName());
                 abilities[i]=findViewById(id);
                 abilities[i].setText(Integer.toString(character.Umiejetnosci[i]));
-        }
+            }
 
         }
         public void addOne(View view){
@@ -96,6 +129,18 @@ public class postac1 extends AppCompatActivity {
             buttonValue.setText(Integer.toString(this.character.Umiejetnosci[numberOfability]));
         }
 
+    }
+    public void changeViev(View view){
+        LinearLayout abiLayout = findViewById(R.id.abilitiesLayout);
+        LinearLayout rapierLayout = findViewById(R.id.rapierLayout);
+        if(abiLayout.getVisibility()==View.GONE){
+            abiLayout.setVisibility(View.VISIBLE);
+            rapierLayout.setVisibility(View.GONE);
+        }
+        else {
+            abiLayout.setVisibility(View.GONE);
+            rapierLayout.setVisibility(View.VISIBLE);
+        }
     }
 
 
