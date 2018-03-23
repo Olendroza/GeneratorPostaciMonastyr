@@ -324,13 +324,527 @@
                 </RelativeLayout><!--Auxiliary factors and wounds-->
 
             </LinearLayout><!--Factors and wounds-->
-            <LinearLayout
-                android:layout_below="@+id/LinLayWsp"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4">
 
-            </LinearLayout><!--abilities-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <!--First group of abilities-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sprawność"
+                            android:textColor="#ffffff" />
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/abi0"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" Atletyka"
+                                android:textColor="#ffffff" />
+
+                            <Button
+                                android:id="@+id/abiValue0"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_toEndOf="@+id/abi0"
+                                android:text="0"
+                                android:textColor="#ffffff" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/abi1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" Wysportowanie"
+                                android:textColor="#ffffff" />
+
+                            <Button
+                                android:id="@+id/abiValue1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/abi1"
+                                android:text="0"
+                                android:textColor="#ffffff" />
+                        </RelativeLayout>
+                        <!--2 group of abilities-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Walka wręcz"
+                            android:textColor="#ffffff" />
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/abi2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" Rapier"
+                                android:textColor="#ffffff" />
+
+                            <Button
+                                android:id="@+id/abiValue2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/abi2"
+                                android:text="0"
+                                android:textColor="#ffffff" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/abi3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" Broń bitewna"
+                                android:textColor="#ffffff" />
+
+                            <Button
+                                android:id="@+id/abiValue3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/abi3"
+                                android:text="0"
+                                android:textColor="#ffffff" />
+                        </RelativeLayout>
+                        <!--3 group of abilities-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Broń palna"
+                            android:textColor="#ffffff" />
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/abi4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" Pistolet"
+                                android:textColor="#ffffff" />
+
+                            <Button
+                                android:id="@+id/abiValue4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/abi4"
+                                android:text="0"
+                                android:textColor="#ffffff" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/abi5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Muszkiet"
+                                android:textColor="#ffffff" />
+
+                            <Button
+                                android:id="@+id/abiValue5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/abi5"
+                                android:text="0"
+                                android:textColor="#ffffff" />
+                        </RelativeLayout>
+                    </LinearLayout><!--abilities 0-5-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <!--4 group of abilities-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wiedza tajemna"
+                        android:textColor="#ffffff" />
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/abi6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" W. Magiczna"
+                            android:textColor="#ffffff" />
+
+                        <Button
+                            android:id="@+id/abiValue6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/abi6"
+                            android:text="0"
+                            android:textColor="#ffffff" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/abi7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Okultyzm"
+                            android:textColor="#ffffff" />
+
+                        <Button
+                            android:id="@+id/abiValue7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/abi7"
+                            android:text="0"
+                            android:textColor="#ffffff" />
+                    </RelativeLayout>
+                    <!--5 group of abilities-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dyplomacja"
+                        android:textColor="#ffffff" />
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/abi8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Blef"
+                            android:textColor="#ffffff" />
+
+                        <Button
+                            android:id="@+id/abiValue8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/abi8"
+                            android:text="0"
+                            android:textColor="#ffffff" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/abi9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Czytanie emocji"
+                            android:textColor="#ffffff" />
+
+                        <Button
+                            android:id="@+id/abiValue9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/abi9"
+                            android:text="0"
+                            android:textColor="#ffffff" />
+                    </RelativeLayout>
+                    <!--6 group of abilities-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wywiad"
+                        android:textColor="#ffffff" />
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/abi10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Nasłuch"
+                            android:textColor="#ffffff" />
+
+                        <Button
+                            android:id="@+id/abiValue10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/abi10"
+                            android:text="0"
+                            android:textColor="#ffffff" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/abi11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Zbieranie info"
+                            android:textColor="#ffffff" />
+
+                        <Button
+                            android:id="@+id/abiValue11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/abi11"
+                            android:text="0"
+                            android:textColor="#ffffff" />
+                    </RelativeLayout>
+                </LinearLayout><!--abilities 6-11-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <!--4 group of abilities-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jazda"
+                            android:textColor="#ffffff" />
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/abi12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" Jeździectwo"
+                                android:textColor="#ffffff" />
+
+                            <Button
+                                android:id="@+id/abiValue12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/abi12"
+                                android:text="0"
+                                android:textColor="#ffffff" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/abi13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Post. ze zwierz."
+                                android:textColor="#ffffff" />
+
+                            <Button
+                                android:id="@+id/abiValue13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/abi13"
+                                android:text="0"
+                                android:textColor="#ffffff" />
+                        </RelativeLayout>
+                        <!--5 group of abilities-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Wykształcenie"
+                            android:textColor="#ffffff" />
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/abi14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" Teologia"
+                                android:textColor="#ffffff" />
+
+                            <Button
+                                android:id="@+id/abiValue14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/abi14"
+                                android:text="0"
+                                android:textColor="#ffffff" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/abi15"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Historia"
+                                android:textColor="#ffffff" />
+
+                            <Button
+                                android:id="@+id/abiValue15"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/abi15"
+                                android:text="0"
+                                android:textColor="#ffffff" />
+                        </RelativeLayout>
+                        <!--6 group of abilities-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Praktyka"
+                            android:textColor="#ffffff" />
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/abi16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" Naprawa"
+                                android:textColor="#ffffff" />
+
+                            <Button
+                                android:id="@+id/abiValue16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/abi16"
+                                android:text="0"
+                                android:textColor="#ffffff" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/abi17"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Opatrywanie"
+                                android:textColor="#ffffff" />
+
+                            <Button
+                                android:id="@+id/abiValue17"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/abi17"
+                                android:text="0"
+                                android:textColor="#ffffff" />
+                        </RelativeLayout>
+                    </LinearLayout><!--abilites 12-17-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Łowiectow"
+                        android:textColor="#ffffff" />
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/abi18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Przetrwanie"
+                            android:textColor="#ffffff" />
+
+                        <Button
+                            android:id="@+id/abiValue18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/abi18"
+                            android:text="0"
+                            android:textColor="#ffffff" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/abi19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ukrywanie"
+                            android:textColor="#ffffff" />
+
+                        <Button
+                            android:id="@+id/abiValue19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/abi19"
+                            android:text="0"
+                            android:textColor="#ffffff" />
+                    </RelativeLayout>
+                    <!--6 group of abilities-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dwór"
+                        android:textColor="#ffffff" />
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/abi20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Plotki"
+                            android:textColor="#ffffff" />
+
+                        <Button
+                            android:id="@+id/abiValue20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/abi20"
+                            android:text="0"
+                            android:textColor="#ffffff" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/abi21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Etykieta"
+                            android:textColor="#ffffff" />
+
+                        <Button
+                            android:id="@+id/abiValue21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/abi21"
+                            android:text="0"
+                            android:textColor="#ffffff" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                </LinearLayout><!--abilities-->
+            </FrameLayout>
 
         </LinearLayout>
     </FrameLayout>
