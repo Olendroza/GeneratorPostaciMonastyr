@@ -19,10 +19,12 @@
         android:layout_height="fill_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/backg" />
-        <RelativeLayout
+        <LinearLayout
+            android:orientation="vertical"
             android:id="@+id/relLay1"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_height="fill_parent"
+            >
 
             <TextView
                 android:id="@+id/tytul"
@@ -38,6 +40,7 @@
                 android:text="Imie Postaci"
                 android:textColor="#ffff"
                 android:layout_below="@+id/tytul"/><!--name-->
+
             <LinearLayout
 
                 android:orientation="horizontal"
@@ -320,8 +323,15 @@
                     </LinearLayout>
                 </RelativeLayout><!--Auxiliary factors and wounds-->
 
-            </LinearLayout>
+            </LinearLayout><!--Factors and wounds-->
+            <LinearLayout
+                android:layout_below="@+id/LinLayWsp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        </RelativeLayout>
+            </LinearLayout><!--abilities-->
+
+        </LinearLayout>
     </FrameLayout>
 </android.support.constraint.ConstraintLayout>
