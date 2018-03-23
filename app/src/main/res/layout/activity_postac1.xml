@@ -457,7 +457,10 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2">
-
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="          "/>
                             <Button
                                 android:id="@+id/abiValue0"
                                 android:layout_width="wrap_content"
@@ -474,6 +477,10 @@
                                 android:onClick="addOne"
                                 android:text="0"
                                 android:textColor="#ffffff" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="          "/>
                             <Button
                                 android:id="@+id/abiValue2"
                                 android:layout_width="wrap_content"
@@ -490,6 +497,10 @@
                                 android:onClick="addOne"
                                 android:text="0"
                                 android:textColor="#ffffff" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="          "/>
                             <Button
                                 android:id="@+id/abiValue4"
                                 android:layout_width="wrap_content"
@@ -506,6 +517,10 @@
                                 android:onClick="addOne"
                                 android:text="0"
                                 android:textColor="#ffffff" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="          "/>
                             <Button
                                 android:id="@+id/abiValue6"
                                 android:layout_width="wrap_content"
@@ -522,6 +537,10 @@
                                 android:onClick="addOne"
                                 android:text="0"
                                 android:textColor="#ffffff" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="          "/>
                             <Button
                                 android:id="@+id/abiValue8"
                                 android:layout_width="wrap_content"
@@ -538,6 +557,10 @@
                                 android:onClick="addOne"
                                 android:text="0"
                                 android:textColor="#ffffff" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="          "/>
                             <Button
                                 android:id="@+id/abiValue10"
                                 android:layout_width="wrap_content"
@@ -560,7 +583,10 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2">
-
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="          "/>
                             <Button
                                 android:id="@+id/abiValue12"
                                 android:layout_width="wrap_content"
@@ -577,6 +603,10 @@
                                 android:onClick="addOne"
                                 android:text="0"
                                 android:textColor="#ffffff" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="          "/>
                             <Button
                                 android:id="@+id/abiValue14"
                                 android:layout_width="wrap_content"
@@ -593,6 +623,10 @@
                                 android:onClick="addOne"
                                 android:text="0"
                                 android:textColor="#ffffff" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="          "/>
                             <Button
                                 android:id="@+id/abiValue16"
                                 android:layout_width="wrap_content"
@@ -609,6 +643,10 @@
                                 android:onClick="addOne"
                                 android:text="0"
                                 android:textColor="#ffffff" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="          "/>
                             <Button
                                 android:id="@+id/abiValue18"
                                 android:layout_width="wrap_content"
@@ -625,6 +663,10 @@
                                 android:onClick="addOne"
                                 android:text="0"
                                 android:textColor="#ffffff" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="          "/>
                             <Button
                                 android:id="@+id/abiValue20"
                                 android:layout_width="wrap_content"
