@@ -334,7 +334,7 @@
                     android:weightSum="10">
                     <LinearLayout
                         android:orientation="vertical"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="4">
                         <TextView
@@ -456,7 +456,7 @@
                             android:orientation="vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="2">
+                            android:layout_weight="1">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -582,7 +582,7 @@
                             android:orientation="vertical"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="2">
+                            android:layout_weight="1">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -685,11 +685,15 @@
                                 android:textColor="#ffffff" />
 
                         </LinearLayout><!--abi values 12-21-->
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4">
                         <LinearLayout
                             android:orientation="vertical"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="4">
+                            android:layout_alignParentEnd="true">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -787,7 +791,9 @@
                                 android:text="Etykieta"
                                 android:textColor="#ffffff" />
                         </LinearLayout><!--abi 11-21-->
-                </LinearLayout><!--abilities-->
+                        </RelativeLayout>
+
+                    </LinearLayout><!--abilities-->
 
         </LinearLayout>
         </ScrollView>
