@@ -351,6 +351,7 @@
                                 android:id="@+id/abi0"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
                                 android:text=" Atletyka"
                                 android:textColor="#ffffff" />
 
@@ -361,6 +362,7 @@
                                 android:layout_alignParentTop="true"
                                 android:layout_marginStart="15dp"
                                 android:layout_toEndOf="@+id/abi0"
+                                android:onClick="addOne"
                                 android:text="0"
                                 android:textColor="#ffffff" />
                         </RelativeLayout>
@@ -372,6 +374,7 @@
                                 android:id="@+id/abi1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
                                 android:text=" Wysportowanie"
                                 android:textColor="#ffffff" />
 
@@ -381,6 +384,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentTop="true"
                                 android:layout_toEndOf="@+id/abi1"
+                                android:onClick="addOne"
                                 android:text="0"
                                 android:textColor="#ffffff" />
                         </RelativeLayout>
@@ -398,6 +402,7 @@
                                 android:id="@+id/abi2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
                                 android:text=" Rapier"
                                 android:textColor="#ffffff" />
 
@@ -406,6 +411,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@+id/abi2"
+                                android:onClick="addOne"
                                 android:text="0"
                                 android:textColor="#ffffff" />
                         </RelativeLayout>
@@ -417,6 +423,7 @@
                                 android:id="@+id/abi3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
                                 android:text=" Broń bitewna"
                                 android:textColor="#ffffff" />
 
@@ -425,6 +432,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@+id/abi3"
+                                android:onClick="addOne"
                                 android:text="0"
                                 android:textColor="#ffffff" />
                         </RelativeLayout>
@@ -442,6 +450,7 @@
                                 android:id="@+id/abi4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
                                 android:text=" Pistolet"
                                 android:textColor="#ffffff" />
 
@@ -450,6 +459,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@+id/abi4"
+                                android:onClick="addOne"
                                 android:text="0"
                                 android:textColor="#ffffff" />
                         </RelativeLayout>
@@ -461,6 +471,7 @@
                                 android:id="@+id/abi5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
                                 android:text="Muszkiet"
                                 android:textColor="#ffffff" />
 
@@ -469,6 +480,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@+id/abi5"
+                                android:onClick="addOne"
                                 android:text="0"
                                 android:textColor="#ffffff" />
                         </RelativeLayout>
@@ -492,6 +504,7 @@
                             android:id="@+id/abi6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:onClick="subtractOne"
                             android:text=" W. Magiczna"
                             android:textColor="#ffffff" />
 
@@ -500,6 +513,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@+id/abi6"
+                            android:onClick="addOne"
                             android:text="0"
                             android:textColor="#ffffff" />
                     </RelativeLayout>
@@ -511,6 +525,7 @@
                             android:id="@+id/abi7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:onClick="subtractOne"
                             android:text="Okultyzm"
                             android:textColor="#ffffff" />
 
@@ -519,6 +534,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@+id/abi7"
+                            android:onClick="addOne"
                             android:text="0"
                             android:textColor="#ffffff" />
                     </RelativeLayout>
@@ -536,6 +552,7 @@
                             android:id="@+id/abi8"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:onClick="subtractOne"
                             android:text=" Blef"
                             android:textColor="#ffffff" />
 
@@ -544,6 +561,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@+id/abi8"
+                            android:onClick="addOne"
                             android:text="0"
                             android:textColor="#ffffff" />
                     </RelativeLayout>
@@ -555,6 +573,7 @@
                             android:id="@+id/abi9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:onClick="subtractOne"
                             android:text="Czytanie emocji"
                             android:textColor="#ffffff" />
 
@@ -563,6 +582,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@+id/abi9"
+                            android:onClick="addOne"
                             android:text="0"
                             android:textColor="#ffffff" />
                     </RelativeLayout>
@@ -580,6 +600,7 @@
                             android:id="@+id/abi10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:onClick="subtractOne"
                             android:text=" Nasłuch"
                             android:textColor="#ffffff" />
 
@@ -588,6 +609,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@+id/abi10"
+                            android:onClick="addOne"
                             android:text="0"
                             android:textColor="#ffffff" />
                     </RelativeLayout>
@@ -599,6 +621,7 @@
                             android:id="@+id/abi11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:onClick="subtractOne"
                             android:text="Zbieranie info"
                             android:textColor="#ffffff" />
 
@@ -607,6 +630,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@+id/abi11"
+                            android:onClick="addOne"
                             android:text="0"
                             android:textColor="#ffffff" />
                     </RelativeLayout>
@@ -630,6 +654,7 @@
                                 android:id="@+id/abi12"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
                                 android:text=" Jeździectwo"
                                 android:textColor="#ffffff" />
 
@@ -638,6 +663,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@+id/abi12"
+                                android:onClick="addOne"
                                 android:text="0"
                                 android:textColor="#ffffff" />
                         </RelativeLayout>
@@ -649,7 +675,8 @@
                                 android:id="@+id/abi13"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Post. ze zwierz."
+                                android:onClick="subtractOne"
+                                android:text="Post. ze zw"
                                 android:textColor="#ffffff" />
 
                             <Button
@@ -657,6 +684,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@+id/abi13"
+                                android:onClick="addOne"
                                 android:text="0"
                                 android:textColor="#ffffff" />
                         </RelativeLayout>
@@ -674,6 +702,7 @@
                                 android:id="@+id/abi14"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
                                 android:text=" Teologia"
                                 android:textColor="#ffffff" />
 
@@ -682,6 +711,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@+id/abi14"
+                                android:onClick="addOne"
                                 android:text="0"
                                 android:textColor="#ffffff" />
                         </RelativeLayout>
@@ -693,6 +723,7 @@
                                 android:id="@+id/abi15"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
                                 android:text="Historia"
                                 android:textColor="#ffffff" />
 
@@ -701,6 +732,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@+id/abi15"
+                                android:onClick="addOne"
                                 android:text="0"
                                 android:textColor="#ffffff" />
                         </RelativeLayout>
@@ -718,6 +750,7 @@
                                 android:id="@+id/abi16"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
                                 android:text=" Naprawa"
                                 android:textColor="#ffffff" />
 
@@ -726,6 +759,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@+id/abi16"
+                                android:onClick="addOne"
                                 android:text="0"
                                 android:textColor="#ffffff" />
                         </RelativeLayout>
@@ -737,6 +771,7 @@
                                 android:id="@+id/abi17"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
                                 android:text="Opatrywanie"
                                 android:textColor="#ffffff" />
 
@@ -745,6 +780,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@+id/abi17"
+                                android:onClick="addOne"
                                 android:text="0"
                                 android:textColor="#ffffff" />
                         </RelativeLayout>
@@ -767,6 +803,7 @@
                             android:id="@+id/abi18"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:onClick="subtractOne"
                             android:text=" Przetrwanie"
                             android:textColor="#ffffff" />
 
@@ -775,6 +812,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@+id/abi18"
+                            android:onClick="addOne"
                             android:text="0"
                             android:textColor="#ffffff" />
                     </RelativeLayout>
@@ -786,6 +824,7 @@
                             android:id="@+id/abi19"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:onClick="subtractOne"
                             android:text="Ukrywanie"
                             android:textColor="#ffffff" />
 
@@ -794,6 +833,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@+id/abi19"
+                            android:onClick="addOne"
                             android:text="0"
                             android:textColor="#ffffff" />
                     </RelativeLayout>
@@ -811,6 +851,7 @@
                             android:id="@+id/abi20"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:onClick="subtractOne"
                             android:text=" Plotki"
                             android:textColor="#ffffff" />
 
@@ -819,6 +860,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@+id/abi20"
+                            android:onClick="addOne"
                             android:text="0"
                             android:textColor="#ffffff" />
                     </RelativeLayout>
@@ -830,6 +872,7 @@
                             android:id="@+id/abi21"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:onClick="subtractOne"
                             android:text="Etykieta"
                             android:textColor="#ffffff" />
 
@@ -838,6 +881,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@+id/abi21"
+                            android:onClick="addOne"
                             android:text="0"
                             android:textColor="#ffffff" />
                     </RelativeLayout>
