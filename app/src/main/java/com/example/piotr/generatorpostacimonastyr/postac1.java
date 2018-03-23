@@ -61,7 +61,6 @@ public class postac1 extends AppCompatActivity {
                 numberString=numberString.replace("e","");
                 int numberOfability = Integer.parseInt(numberString);
                 this.character.Umiejetnosci[numberOfability]++;
-             //   buttonClicked.setText(numberString);
                 buttonClicked.setText(Integer.toString(this.character.Umiejetnosci[numberOfability]));
             }
         }
@@ -83,6 +82,7 @@ public class postac1 extends AppCompatActivity {
         else if(id.contains("abi")){
             String numberString = id.substring(id.length()-3);
             numberString=numberString.replace("i","");
+            numberString=numberString.replace("b","");
             String abiId = id.substring(0,id.length()-numberString.length())+"Value"+numberString;
             buttonValue=findViewById(getResources().getIdentifier(abiId,"id",getPackageName()));
             int numberOfability = Integer.parseInt(numberString);
