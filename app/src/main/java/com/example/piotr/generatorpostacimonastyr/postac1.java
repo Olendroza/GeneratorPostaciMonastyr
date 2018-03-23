@@ -24,20 +24,25 @@ public class postac1 extends AppCompatActivity {
 
         Button[] mainFactorValue = new Button[8];
         Button[] auxiliaryFactorValue = new Button[6];
-
+        Button[] abilities = new Button[22];
             for (int i = 0; i < mainFactorValue.length; i++) {
                 String source = "wspGValue" + Integer.toString(i + 1);
                 int id = getResources().getIdentifier(source, "id", getPackageName());
                 mainFactorValue[i] = findViewById(id);
                 mainFactorValue[i].setText(Integer.toString(character.WspolczynnikiGlowne[i]));
             }
-
             for (int i = 0; i < auxiliaryFactorValue.length; i++) {
                 String source = "wspPValue" + Integer.toString(i + 1);
                 int id = getResources().getIdentifier(source, "id", getPackageName());
                 auxiliaryFactorValue[i] = findViewById(id);
                 auxiliaryFactorValue[i].setText(Integer.toString(character.WspolczynnikiPomocnicze[i]));
             }
+            for(int i=0;i<abilities.length;i++){
+                String source = "abiValue"+ Integer.toString(i);
+                int id = getResources().getIdentifier(source,"id",getPackageName());
+                abilities[i]=findViewById(id);
+                abilities[i].setText(Integer.toString(character.Umiejetnosci[i]));
+        }
 
         }
         public void addOne(View view){
