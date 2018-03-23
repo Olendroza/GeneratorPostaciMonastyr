@@ -43,31 +43,42 @@ public class postac1 extends AppCompatActivity {
         public void addOne(View view){
         Button buttonClicked = findViewById(view.getId());
         String id = view.getResources().getResourceName(view.getId());
-        int numberOfFactor = Integer.parseInt(id.substring(id.length()-1))-1;
             if(id.contains("wspG")){
+                int numberOfFactor = Integer.parseInt(id.substring(id.length()-1))-1;
                 this.character.WspolczynnikiGlowne[numberOfFactor]++;
                 buttonClicked.setText(Integer.toString(this.character.WspolczynnikiGlowne[numberOfFactor]));
             }
 
-            else{
+            else if(id.contains("wspP")){
+                int numberOfFactor = Integer.parseInt(id.substring(id.length()-1))-1;
                 this.character.WspolczynnikiPomocnicze[numberOfFactor]++;
                 buttonClicked.setText(Integer.toString(this.character.WspolczynnikiPomocnicze[numberOfFactor]));
+            }
+            else if(id.contains("abi"))
+            {
+                String numberString = id.substring(id.length()-3);
+                numberString=numberString.replace("i","");
+                int numberOfability = Integer.parseInt(numberString);
+                this.character.Umiejetnosci[numberOfability]++;
+                buttonClicked.setText(Integer.toString(this.character.Umiejetnosci[numberOfability]));
             }
         }
     public void subtractOne(View view){
         String id = view.getResources().getResourceName(view.getId());
         String newId = id.substring(0,id.length()-1)+"Value"+id.substring(id.length()-1);
-        int numberOfFactor = Integer.parseInt(id.substring(id.length()-1))-1;
         Button buttonValue = findViewById(getResources().getIdentifier(newId,"id",getPackageName()));
         if(id.contains("wspG")){
+            int numberOfFactor = Integer.parseInt(id.substring(id.length()-1))-1;
             this.character.WspolczynnikiGlowne[numberOfFactor]--;
             buttonValue.setText(Integer.toString(this.character.WspolczynnikiGlowne[numberOfFactor]));
         }
 
-        else{
+        else if(id.contains("wspP")){
+            int numberOfFactor = Integer.parseInt(id.substring(id.length()-1))-1;
             this.character.WspolczynnikiPomocnicze[numberOfFactor]--;
             buttonValue.setText(Integer.toString(this.character.WspolczynnikiPomocnicze[numberOfFactor]));
         }
+
     }
 
 
