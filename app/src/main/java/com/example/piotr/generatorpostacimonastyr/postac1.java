@@ -56,10 +56,12 @@ public class postac1 extends AppCompatActivity {
             }
             else if(id.contains("abi"))
             {
-                String numberString = id.substring(id.length()-3);
-                numberString=numberString.replace("i","");
+                String numberString = id.substring(id.length()-2);
+                numberString=numberString.replace("u","");
+                numberString=numberString.replace("e","");
                 int numberOfability = Integer.parseInt(numberString);
                 this.character.Umiejetnosci[numberOfability]++;
+             //   buttonClicked.setText(numberString);
                 buttonClicked.setText(Integer.toString(this.character.Umiejetnosci[numberOfability]));
             }
         }
