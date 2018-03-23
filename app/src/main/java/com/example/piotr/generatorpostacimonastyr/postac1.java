@@ -78,6 +78,16 @@ public class postac1 extends AppCompatActivity {
             this.character.WspolczynnikiPomocnicze[numberOfFactor]--;
             buttonValue.setText(Integer.toString(this.character.WspolczynnikiPomocnicze[numberOfFactor]));
         }
+        else if(id.contains("abi")){
+            String numberString = id.substring(id.length()-3);
+            numberString=numberString.replace("i","");
+            String abiId = id.substring(0,id.length()-numberString.length())+"Value"+numberString;
+            buttonValue=findViewById(getResources().getIdentifier(abiId,"id",getPackageName()));
+            int numberOfability = Integer.parseInt(numberString);
+
+            this.character.Umiejetnosci[numberOfability]--;
+            buttonValue.setText(Integer.toString(this.character.Umiejetnosci[numberOfability]));
+        }
 
     }
 
