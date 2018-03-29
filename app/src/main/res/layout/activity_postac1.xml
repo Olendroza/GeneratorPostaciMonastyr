@@ -18,7 +18,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/backg" />
+        android:src="@drawable/backg" /><!--background image-->
         <ScrollView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
@@ -1052,10 +1052,10 @@
                         </RelativeLayout>
                 </LinearLayout>
                 </LinearLayout><!--rapier-->
-            </FrameLayout>
+            </FrameLayout><!-- frame for abilities, rapier moves and sword moves-->
 
         </LinearLayout>
-        </ScrollView>
+        </ScrollView><!-- frame that allow to scroll if view is to big to fit on a screen-->
 
-    </FrameLayout>
+    </FrameLayout><!--frame that stores background image-->
 </android.support.constraint.ConstraintLayout>
