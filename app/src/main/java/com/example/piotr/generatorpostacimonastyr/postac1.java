@@ -227,6 +227,27 @@ public class postac1 extends AppCompatActivity {
                 buttonValue.setText(Integer.toString(this.character.AkcjeRapierObrona[numberOfmove]));
             }
         }
+        else if(id.contains("sword"))
+        {
+            if(id.contains("swordA")){
+                id=id.replace("Value","");
+                String numberString = id.substring(id.length()-1);
+                newId = id+"Value";
+                buttonValue = findViewById(getResources().getIdentifier(newId,"id",getPackageName()));
+                int numberOfmove = Integer.parseInt(numberString);
+                this.character.AkcjeMieczAtak[numberOfmove]--;
+                buttonValue.setText(Integer.toString(this.character.AkcjeMieczAtak[numberOfmove]));
+            }
+            else{
+                id=id.replace("Value","");
+                String numberString = id.substring(id.length()-1);
+                newId = id+"Value";
+                buttonValue = findViewById(getResources().getIdentifier(newId,"id",getPackageName()));
+                int numberOfmove = Integer.parseInt(numberString);
+                this.character.AkcjeMieczObrona[numberOfmove]--;
+                buttonValue.setText(Integer.toString(this.character.AkcjeMieczObrona[numberOfmove]));
+            }
+        }
 
 
     }

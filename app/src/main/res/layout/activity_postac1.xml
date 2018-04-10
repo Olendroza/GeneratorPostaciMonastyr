@@ -1363,7 +1363,7 @@
                                     android:text="Odbicie" />
 
                                 <Button
-                                    android:id="@+id/swordrD1"
+                                    android:id="@+id/swordD1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:onClick="subtractOne"
