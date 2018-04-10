@@ -824,61 +824,81 @@
                                 android:layout_height="wrap_content"
                                 android:textColor="#ffffff"
                                 android:text="Zwarcie i atak w ruchu"/>
+
                             <Button
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
                                 android:id="@+id/cCombatA"
-                                android:text="Zwarcie: Atak"/>
-                            <Button
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text="Zwarcie: Atak" />
+
+                            <Button
                                 android:id="@+id/cCombatD"
-                                android:text="Zwarcie: Obrona"/>
-                            <Button
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text="Zwarcie: Obrona" />
+
+                            <Button
                                 android:id="@+id/motionA"
-                                android:text="Ruch: Kroki"/>
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text="Ruch: Kroki" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="#ffffff"
                                 android:text="Rapier: Atak"/>
+
                             <Button
                                 android:id="@+id/rapierA0"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Pchnięcie proste"/>
+                                android:onClick="subtractOne"
+                                android:text="Pchnięcie proste" />
+
                             <Button
                                 android:id="@+id/rapierA1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Cięcie zwykłe"/>
+                                android:onClick="subtractOne"
+                                android:text="Cięcie zwykłe" />
+
                             <Button
                                 android:id="@+id/rapierA2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Zwód"/>
+                                android:onClick="subtractOne"
+                                android:text="Zwód" />
+
                             <Button
                                 android:id="@+id/rapierA3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Ponowienie"/>
+                                android:onClick="subtractOne"
+                                android:text="Ponowienie" />
+
                             <Button
                                 android:id="@+id/rapierA4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Wypad"/>
+                                android:onClick="addOne"
+                                android:text="Wypad" />
+
                             <Button
                                 android:id="@+id/rapierA5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Pchnięcie pozorne"/>
+                                android:onClick="subtractOne"
+                                android:text="Pchnięcie pozorne" />
+
                             <Button
                                 android:id="@+id/rapierA6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Zbicie"/>
+                                android:onClick="subtractOne"
+                                android:text="Zbicie" />
                         </LinearLayout><!--Rapier moves-->
                         <LinearLayout
                             android:orientation="vertical"
@@ -889,60 +909,80 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="  "/>
+
                             <Button
                                 android:id="@+id/cCombatAValue"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"/>
+                                android:onClick="addOne"
+                                android:text="0" />
+
                             <Button
                                 android:id="@+id/cCombatDValue"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"/>
+                                android:onClick="addOne"
+                                android:text="0" />
+
                             <Button
                                 android:id="@+id/motionAValue"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"/>
+                                android:onClick="addOne"
+                                android:text="0" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="  "/>
+
                             <Button
                                 android:id="@+id/rapierA0Value"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"/>
+                                android:onClick="addOne"
+                                android:text="0" />
+
                             <Button
                                 android:id="@+id/rapierA1Value"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"/>
+                                android:onClick="addOne"
+                                android:text="0" />
+
                             <Button
                                 android:id="@+id/rapierA2Value"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"/>
+                                android:onClick="addOne"
+                                android:text="0" />
+
                             <Button
                                 android:id="@+id/rapierA3Value"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"/>
+                                android:onClick="addOne"
+                                android:text="0" />
+
                             <Button
                                 android:id="@+id/rapierA4Value"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"/>
+                                android:onClick="addOne"
+                                android:text="0" />
+
                             <Button
                                 android:id="@+id/rapierA5Value"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"/>
+                                android:onClick="addOne"
+                                android:text="0" />
+
                             <Button
                                 android:id="@+id/rapierA6Value"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"/>
+                                android:onClick="addOne"
+                                android:text="0" />
                         </LinearLayout><!--rapier moves values-->
                         <LinearLayout
                             android:orientation="vertical"
@@ -953,45 +993,59 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="  "/>
+
                             <Button
                                 android:id="@+id/motionD0Value"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"/>
+                                android:onClick="addOne"
+                                android:text="0" />
+
                             <Button
                                 android:id="@+id/motionD1Value"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"/>
+                                android:onClick="addOne"
+                                android:text="0" />
+
                             <Button
                                 android:id="@+id/motionD2Value"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"/>
+                                android:onClick="addOne"
+                                android:text="0" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="  "/>
+
                             <Button
                                 android:id="@+id/rapierD0Value"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"/>
+                                android:onClick="addOne"
+                                android:text="0" />
+
                             <Button
                                 android:id="@+id/rapierD1Value"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"/>
+                                android:onClick="addOne"
+                                android:text="0" />
+
                             <Button
                                 android:id="@+id/rapierD2Value"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"/>
+                                android:onClick="addOne"
+                                android:text="0" />
+
                             <Button
                                 android:id="@+id/rapierD3Value"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"/>
+                                android:onClick="addOne"
+                                android:text="0" />
                         </LinearLayout>
                         <RelativeLayout
                             android:layout_width="0dp"
@@ -1012,41 +1066,54 @@
                                 android:id="@+id/motionD0"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Praca nóg"/>
+                                android:onClick="subtractOne"
+                                android:text="Praca nóg" />
+
                             <Button
                                 android:id="@+id/motionD1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Unik"/>
+                                android:onClick="subtractOne"
+                                android:text="Unik" />
+
                             <Button
                                 android:id="@+id/motionD2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Odskok"/>
+                                android:onClick="subtractOne"
+                                android:text="Odskok" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Rapier: Obrona" />
+
                             <Button
                                 android:id="@+id/rapierD0"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Zasłona II"/>
+                                android:onClick="subtractOne"
+                                android:text="Zasłona II" />
+
                             <Button
                                 android:id="@+id/rapierD1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Zasłona I"/>
+                                android:onClick="subtractOne"
+                                android:text="Zasłona I" />
+
                             <Button
                                 android:id="@+id/rapierD2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Riposta"/>
+                                android:onClick="subtractOne"
+                                android:text="Riposta" />
+
                             <Button
                                 android:id="@+id/rapierD3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Wyprzedzenie"/>
+                                android:onClick="subtractOne"
+                                android:text="Wyprzedzenie" />
                         </LinearLayout>
                         </RelativeLayout>
                 </LinearLayout>

@@ -178,12 +178,15 @@ public class postac1 extends AppCompatActivity {
         }
         else if(id.contains("motion")){
             if(id.contains("motionA")){
+                newId = id+"Value";
+                buttonValue = findViewById(getResources().getIdentifier(newId,"id",getPackageName()));
                 this.character.AkcjeRuch[0]--;
                 buttonValue.setText(Integer.toString(this.character.AkcjeRuch[0]));
             }
             else{
-                id=id.replace("Value","");
                 String numberString = id.substring(id.length()-1);
+                newId = id+"Value";
+                buttonValue = findViewById(getResources().getIdentifier(newId,"id",getPackageName()));
                 int numberOfaction = Integer.parseInt(numberString)+1;
                 this.character.AkcjeRuch[numberOfaction]--;
                 buttonValue.setText(Integer.toString(this.character.AkcjeRuch[numberOfaction]));
@@ -194,6 +197,8 @@ public class postac1 extends AppCompatActivity {
             if(id.contains("rapierA")){
                 id=id.replace("Value","");
                 String numberString = id.substring(id.length()-1);
+                newId = id+"Value";
+                buttonValue = findViewById(getResources().getIdentifier(newId,"id",getPackageName()));
                 int numberOfmove = Integer.parseInt(numberString);
                 this.character.AkcjeRapierAtak[numberOfmove]--;
                 buttonValue.setText(Integer.toString(this.character.AkcjeRapierAtak[numberOfmove]));
@@ -201,6 +206,8 @@ public class postac1 extends AppCompatActivity {
             else{
                 id=id.replace("Value","");
                 String numberString = id.substring(id.length()-1);
+                newId = id+"Value";
+                buttonValue = findViewById(getResources().getIdentifier(newId,"id",getPackageName()));
                 int numberOfmove = Integer.parseInt(numberString);
                 this.character.AkcjeRapierObrona[numberOfmove]--;
                 buttonValue.setText(Integer.toString(this.character.AkcjeRapierObrona[numberOfmove]));
