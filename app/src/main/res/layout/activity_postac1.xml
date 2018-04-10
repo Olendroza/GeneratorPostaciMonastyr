@@ -13,457 +13,463 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/backg" /><!--background image-->
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/backg" /><!--background image-->
         <ScrollView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
-        <LinearLayout
-            android:orientation="vertical"
-            android:id="@+id/relLay1"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            >
-
-
-            <TextView
-                android:id="@+id/tytul"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tytul"
-                android:textColor="#FFFF"
-                android:layout_alignParentTop="true"/><!--title-->
-            <TextView
-                android:id="@+id/imie"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Imie Postaci"
-                android:textColor="#ffff"
-                android:layout_below="@+id/tytul"/><!--name-->
-
             <LinearLayout
-
-                android:orientation="horizontal"
-                android:id="@+id/LinLayWsp"
+                android:orientation="vertical"
+                android:id="@+id/relLay1"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/imie"
-                android:weightSum="10">
+                android:layout_height="fill_parent"
+                >
+
+
+                <TextView
+                    android:id="@+id/tytul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tytul"
+                    android:textColor="#FFFF"
+                    android:layout_alignParentTop="true"/><!--title-->
+                <TextView
+                    android:id="@+id/imie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Imie Postaci"
+                    android:textColor="#FFFF"
+                    android:layout_below="@+id/tytul"/><!--name-->
+
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="0dp"
+
+                    android:orientation="horizontal"
+                    android:id="@+id/LinLayWsp"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4">
-
-                    <Button
-
-                        android:id="@+id/wspG1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="subtractOne"
-                        android:text="Budowa:"
-                        android:textColor="#ffff" />
-
-                    <Button
-                        android:id="@+id/wspG2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="subtractOne"
-                        android:text="Zręczność:"
-                        android:textColor="#ffff" />
-
-                    <Button
-                        android:id="@+id/wspG3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="subtractOne"
-                        android:text="Spryt:"
-                        android:textColor="#ffff" />
-
-                    <Button
-                        android:id="@+id/wspG4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="subtractOne"
-                        android:text="Spostrzegawczość"
-                        android:textColor="#ffff" />
-
-                    <Button
-                        android:id="@+id/wspG5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="subtractOne"
-                        android:text="Wiarygodność"
-                        android:textColor="#ffff" />
-
-                    <Button
-                        android:id="@+id/wspG6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="subtractOne"
-                        android:text="Opanowanie"
-                        android:textColor="#ffff" />
-
-                    <Button
-                        android:id="@+id/wspG7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="subtractOne"
-                        android:text="Wytrwałość"
-                        android:textColor="#ffff" />
-
-                    <Button
-                        android:id="@+id/wspG8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="subtractOne"
-                        android:text="Wiara"
-                        android:textColor="#ffff" />
-                </LinearLayout> <!--Main factors-->
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1">
-
-                    <Button
-                        android:id="@+id/wspGValue1"
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:maxLines="1"
-                        android:onClick="addOne"
-                        android:text="0" />
-
-                    <Button
-                        android:id="@+id/wspGValue2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="addOne"
-                        android:text="0" />
-
-                    <Button
-                        android:id="@+id/wspGValue3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="addOne"
-                        android:text="0" />
-
-                    <Button
-                        android:id="@+id/wspGValue4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="addOne"
-                        android:text="0" />
-
-                    <Button
-                        android:id="@+id/wspGValue5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="addOne"
-                        android:text="0" />
-
-                    <Button
-                        android:id="@+id/wspGValue6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="addOne"
-                        android:text="0" />
-
-                    <Button
-                        android:id="@+id/wspGValue7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="addOne"
-                        android:text="0" />
-
-                    <Button
-                        android:id="@+id/wspGValue8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="addOne"
-                        android:text="0" />
-
-
-
-                </LinearLayout> <!--Main factors values buttons-->
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-                    <Button
-                        android:id="@+id/ranyValue"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentTop="true"/>
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true">
-
-                        <Button
-                            android:id="@+id/wspPValue1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="addOne"
-                            android:text="0" />
-
-                        <Button
-                            android:id="@+id/wspPValue2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="addOne"
-                            android:text="0" />
-
-                        <Button
-                            android:id="@+id/wspPValue3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="addOne"
-                            android:text="0" />
-
-                        <Button
-                            android:id="@+id/wspPValue4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="addOne"
-                            android:text="0" />
-
-                        <Button
-                            android:id="@+id/wspPValue5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="addOne"
-                            android:text="0" />
-
-                        <Button
-                            android:id="@+id/wspPValue6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="addOne"
-                            android:text="0" />
-
-
-
-                    </LinearLayout>
-                </RelativeLayout><!--Auxiliary factors values buttons-->
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="4">
-
-                    <Button
-                        android:id="@+id/rany"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentTop="true"
-                        android:text="Rany  "
-                        android:textColor="#ffff" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_below="@+id/rany"
-                        android:onClick="changeViev"
-                        android:text="Zmień widok" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentEnd="true"
-                        android:gravity="right">
-
-                        <Button
-                            android:id="@+id/wspP1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="subtractOne"
-                            android:text="Refleks"
-                            android:textColor="#ffff" />
-
-                        <Button
-                            android:id="@+id/wspP2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="subtractOne"
-                            android:text="Autorytet"
-                            android:textColor="#ffff" />
-
-                        <Button
-                            android:id="@+id/wspP3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="subtractOne"
-                            android:text="Wiedza Oglolna"
-                            android:textColor="#ffff" />
-
-                        <Button
-                            android:id="@+id/wspP4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="subtractOne"
-                            android:text="Fechtunek"
-                            android:textColor="#ffff" />
-
-                        <Button
-                            android:id="@+id/wspP5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="subtractOne"
-                            android:text="Strzelanie"
-                            android:textColor="#ffff" />
-
-                        <Button
-                            android:id="@+id/wspP6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="subtractOne"
-                            android:text="Dusza"
-                            android:textColor="#ffff" />
-
-                    </LinearLayout>
-                </RelativeLayout><!--Auxiliary factors and wounds-->
-
-            </LinearLayout><!--Factors and wounds-->
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                    <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                        android:id="@+id/abilitiesLayout"
-                    android:weightSum="10"
-                        android:visibility="gone">
+                    android:layout_below="@+id/imie"
+                    android:weightSum="10">
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="4">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Sprawność"
-                            android:textColor="#ffffff" />
+
                         <Button
-                            android:id="@+id/abi0"
+
+                            android:id="@+id/wspG1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="subtractOne"
-                            android:text=" Atletyka"
-                            android:textColor="#ffffff" />
+                            android:text="Budowa:"
+                            />
+
                         <Button
-                            android:id="@+id/abi1"
+                            android:id="@+id/wspG2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="subtractOne"
-                            android:text=" Wysportowanie"
-                            android:textColor="#ffffff" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Walka wręcz"
-                            android:textColor="#ffffff" />
+                            android:text="Zręczność:"
+                            />
+
                         <Button
-                            android:id="@+id/abi2"
+                            android:id="@+id/wspG3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="subtractOne"
-                            android:text=" Rapier"
-                            android:textColor="#ffffff" />
+                            android:text="Spryt:"
+                            />
+
                         <Button
-                            android:id="@+id/abi3"
+                            android:id="@+id/wspG4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="subtractOne"
-                            android:text=" Broń bitewna"
-                            android:textColor="#ffffff" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Broń palna"
-                            android:textColor="#ffffff" />
+                            android:text="Spostrzegawczość"
+                            />
+
                         <Button
-                            android:id="@+id/abi4"
+                            android:id="@+id/wspG5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="subtractOne"
-                            android:text=" Pistolet"
-                            android:textColor="#ffffff" />
+                            android:text="Wiarygodność"
+                            />
+
                         <Button
-                            android:id="@+id/abi5"
+                            android:id="@+id/wspG6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="subtractOne"
-                            android:text="Muszkiet"
-                            android:textColor="#ffffff" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Wiedza tajemna"
-                            android:textColor="#ffffff" />
+                            android:text="Opanowanie"
+                            />
+
                         <Button
-                            android:id="@+id/abi6"
+                            android:id="@+id/wspG7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="subtractOne"
-                            android:text=" W. Magiczna"
-                            android:textColor="#ffffff" />
+                            android:text="Wytrwałość"
+                            />
+
                         <Button
-                            android:id="@+id/abi7"
+                            android:id="@+id/wspG8"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="subtractOne"
-                            android:text="Okultyzm"
-                            android:textColor="#ffffff" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Dyplomacja"
-                            android:textColor="#ffffff" />
+                            android:text="Wiara"
+                            />
+                    </LinearLayout> <!--Main factors-->
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
                         <Button
-                            android:id="@+id/abi8"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="subtractOne"
-                            android:text=" Blef"
-                            android:textColor="#ffffff" />
+                            android:id="@+id/wspGValue1"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:maxLines="1"
+                            android:onClick="addOne"
+                            android:text="0" />
+
                         <Button
-                            android:id="@+id/abi9"
+                            android:id="@+id/wspGValue2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:onClick="subtractOne"
-                            android:text="Czytanie emocji"
-                            android:textColor="#ffffff" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Wywiad"
-                            android:textColor="#ffffff" />
+                            android:onClick="addOne"
+                            android:text="0" />
+
                         <Button
-                            android:id="@+id/abi10"
+                            android:id="@+id/wspGValue3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:onClick="subtractOne"
-                            android:text=" Nasłuch"
-                            android:textColor="#ffffff" />
+                            android:onClick="addOne"
+                            android:text="0" />
+
                         <Button
-                            android:id="@+id/abi11"
+                            android:id="@+id/wspGValue4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:onClick="subtractOne"
-                            android:text="Zbieranie info"
-                            android:textColor="#ffffff" />
-                    </LinearLayout><!--abi 0-11-->
+                            android:onClick="addOne"
+                            android:text="0" />
+
+                        <Button
+                            android:id="@+id/wspGValue5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="addOne"
+                            android:text="0" />
+
+                        <Button
+                            android:id="@+id/wspGValue6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="addOne"
+                            android:text="0" />
+
+                        <Button
+                            android:id="@+id/wspGValue7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="addOne"
+                            android:text="0" />
+
+                        <Button
+                            android:id="@+id/wspGValue8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="addOne"
+                            android:text="0" />
+
+
+
+                    </LinearLayout> <!--Main factors values buttons-->
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <Button
+                            android:id="@+id/ranyValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"/>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true">
+
+                            <Button
+                                android:id="@+id/wspPValue1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="addOne"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/wspPValue2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="addOne"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/wspPValue3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="addOne"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/wspPValue4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="addOne"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/wspPValue5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="addOne"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/wspPValue6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="addOne"
+                                android:text="0" />
+
+
+
+                        </LinearLayout>
+                    </RelativeLayout><!--Auxiliary factors values buttons-->
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4">
+
+                        <Button
+                            android:id="@+id/rany"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:text="Rany  "
+                            />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_below="@+id/rany"
+                            android:onClick="changeViev"
+                            android:text="Zmień widok" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:gravity="right">
+
+                            <Button
+                                android:id="@+id/wspP1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text="Refleks"
+                                />
+
+                            <Button
+                                android:id="@+id/wspP2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text="Autorytet"
+                                />
+
+                            <Button
+                                android:id="@+id/wspP3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text="Wiedza Oglolna"
+                                />
+
+                            <Button
+                                android:id="@+id/wspP4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text="Fechtunek"
+                                />
+
+                            <Button
+                                android:id="@+id/wspP5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text="Strzelanie"
+                                />
+
+                            <Button
+                                android:id="@+id/wspP6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text="Dusza"
+                                />
+
+                        </LinearLayout>
+                    </RelativeLayout><!--Auxiliary factors and wounds-->
+
+                </LinearLayout><!--Factors and wounds-->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/abilitiesLayout"
+                        android:weightSum="10"
+                        android:visibility="gone">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#ffffff"
+                                android:text="Sprawność"
+                                />
+                            <Button
+                                android:id="@+id/abi0"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text=" Atletyka"
+                                />
+                            <Button
+                                android:id="@+id/abi1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text=" Wysportowanie"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#ffffff"
+                                android:text="Walka wręcz"
+                                />
+                            <Button
+                                android:id="@+id/abi2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text=" Rapier"
+                                />
+                            <Button
+                                android:id="@+id/abi3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text=" Broń bitewna"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#ffffff"
+                                android:text="Broń palna"
+                                />
+                            <Button
+                                android:id="@+id/abi4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text=" Pistolet"
+                                />
+                            <Button
+                                android:id="@+id/abi5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text="Muszkiet"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Wiedza tajemna"
+                                android:textColor="#ffffff"
+                                />
+                            <Button
+                                android:id="@+id/abi6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text=" W. Magiczna"
+                                />
+                            <Button
+                                android:id="@+id/abi7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text="Okultyzm"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dyplomacja"
+                                android:textColor="#ffffff"
+                                />
+                            <Button
+                                android:id="@+id/abi8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text=" Blef"
+                                />
+                            <Button
+                                android:id="@+id/abi9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text="Czytanie emocji"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Wywiad"
+                                android:textColor="#ffffff"
+                                />
+                            <Button
+                                android:id="@+id/abi10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text=" Nasłuch"
+                                />
+                            <Button
+                                android:id="@+id/abi11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text="Zbieranie info"
+                                />
+                        </LinearLayout><!--abi 0-11-->
                         <LinearLayout
                             android:orientation="vertical"
                             android:layout_width="0dp"
@@ -480,7 +486,7 @@
                                 android:layout_toRightOf="@+id/abi11"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
                             <Button
                                 android:id="@+id/abiValue1"
                                 android:layout_width="wrap_content"
@@ -488,7 +494,7 @@
                                 android:layout_toRightOf="@+id/abi12"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -500,7 +506,7 @@
                                 android:layout_toRightOf="@+id/abi13"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
                             <Button
                                 android:id="@+id/abiValue3"
                                 android:layout_width="wrap_content"
@@ -508,7 +514,7 @@
                                 android:layout_toRightOf="@+id/abi14"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -520,7 +526,7 @@
                                 android:layout_toRightOf="@+id/abi11"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
                             <Button
                                 android:id="@+id/abiValue5"
                                 android:layout_width="wrap_content"
@@ -528,7 +534,7 @@
                                 android:layout_toRightOf="@+id/abi11"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -540,7 +546,7 @@
                                 android:layout_toRightOf="@+id/abi11"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
                             <Button
                                 android:id="@+id/abiValue7"
                                 android:layout_width="wrap_content"
@@ -548,7 +554,7 @@
                                 android:layout_toRightOf="@+id/abi11"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -560,7 +566,7 @@
                                 android:layout_toRightOf="@+id/abi11"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
                             <Button
                                 android:id="@+id/abiValue9"
                                 android:layout_width="wrap_content"
@@ -568,7 +574,7 @@
                                 android:layout_toRightOf="@+id/abi11"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -580,7 +586,7 @@
                                 android:layout_toRightOf="@+id/abi11"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
                             <Button
                                 android:id="@+id/abiValue11"
                                 android:layout_width="wrap_content"
@@ -588,7 +594,7 @@
                                 android:layout_toRightOf="@+id/abi11"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
                         </LinearLayout><!--abi values 0-11-->
                         <LinearLayout
                             android:orientation="vertical"
@@ -606,7 +612,7 @@
                                 android:layout_toRightOf="@+id/abi11"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
                             <Button
                                 android:id="@+id/abiValue13"
                                 android:layout_width="wrap_content"
@@ -614,7 +620,7 @@
                                 android:layout_toRightOf="@+id/abi12"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -626,7 +632,7 @@
                                 android:layout_toRightOf="@+id/abi13"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
                             <Button
                                 android:id="@+id/abiValue15"
                                 android:layout_width="wrap_content"
@@ -634,7 +640,7 @@
                                 android:layout_toRightOf="@+id/abi14"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -646,7 +652,7 @@
                                 android:layout_toRightOf="@+id/abi11"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
                             <Button
                                 android:id="@+id/abiValue17"
                                 android:layout_width="wrap_content"
@@ -654,7 +660,7 @@
                                 android:layout_toRightOf="@+id/abi11"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -666,7 +672,7 @@
                                 android:layout_toRightOf="@+id/abi11"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
                             <Button
                                 android:id="@+id/abiValue19"
                                 android:layout_width="wrap_content"
@@ -674,7 +680,7 @@
                                 android:layout_toRightOf="@+id/abi11"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -686,7 +692,7 @@
                                 android:layout_toRightOf="@+id/abi11"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
                             <Button
                                 android:id="@+id/abiValue21"
                                 android:layout_width="wrap_content"
@@ -694,627 +700,9 @@
                                 android:layout_toRightOf="@+id/abi11"
                                 android:onClick="addOne"
                                 android:text="0"
-                                android:textColor="#ffffff" />
+                                />
 
                         </LinearLayout><!--abi values 12-21-->
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4">
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Jazda"
-                                android:textColor="#ffffff" />
-                            <Button
-                                android:id="@+id/abi12"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text=" Jeździectwo"
-                                android:textColor="#ffffff" />
-                            <Button
-                                android:id="@+id/abi13"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Post. ze zw"
-                                android:textColor="#ffffff" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Wykształcenie"
-                                android:textColor="#ffffff" />
-                            <Button
-                                android:id="@+id/abi14"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text=" Teologia"
-                                android:textColor="#ffffff" />
-                            <Button
-                                android:id="@+id/abi15"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Historia"
-                                android:textColor="#ffffff" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Praktyka"
-                                android:textColor="#ffffff" />
-                            <Button
-                                android:id="@+id/abi16"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text=" Naprawa"
-                                android:textColor="#ffffff" />
-                            <Button
-                                android:id="@+id/abi17"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Opatrywanie"
-                                android:textColor="#ffffff" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Łowiectow"
-                                android:textColor="#ffffff" />
-                            <Button
-                                android:id="@+id/abi18"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text=" Przetrwanie"
-                                android:textColor="#ffffff" />
-                            <Button
-                                android:id="@+id/abi19"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Ukrywanie"
-                                android:textColor="#ffffff" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Dwór"
-                                android:textColor="#ffffff" />
-                            <Button
-                                android:id="@+id/abi20"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text=" Plotki"
-                                android:textColor="#ffffff" />
-                            <Button
-                                android:id="@+id/abi21"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Etykieta"
-                                android:textColor="#ffffff" />
-                        </LinearLayout><!--abi 11-21-->
-                        </RelativeLayout>
-                    </LinearLayout><!--abilities-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rapierLayout"
-                    android:weightSum="10"
-                    android:visibility="gone">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:weightSum="10">
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textColor="#ffffff"
-                                android:text="Zwarcie i atak w ruchu"/>
-
-                            <Button
-                                android:id="@+id/cCombatA"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Zwarcie: Atak" />
-
-                            <Button
-                                android:id="@+id/cCombatD"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Zwarcie: Obrona" />
-
-                            <Button
-                                android:id="@+id/motionA"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Ruch: Kroki" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textColor="#ffffff"
-                                android:text="Rapier: Atak"/>
-
-                            <Button
-                                android:id="@+id/rapierA0"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Pchnięcie proste" />
-
-                            <Button
-                                android:id="@+id/rapierA1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Cięcie zwykłe" />
-
-                            <Button
-                                android:id="@+id/rapierA2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Zwód" />
-
-                            <Button
-                                android:id="@+id/rapierA3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Ponowienie" />
-
-                            <Button
-                                android:id="@+id/rapierA4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="Wypad" />
-
-                            <Button
-                                android:id="@+id/rapierA5"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Pchnięcie pozorne" />
-
-                            <Button
-                                android:id="@+id/rapierA6"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Zbicie" />
-                        </LinearLayout><!--Rapier moves-->
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="  "/>
-
-                            <Button
-                                android:id="@+id/cCombatAValue"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/cCombatDValue"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/motionAValue"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="  "/>
-
-                            <Button
-                                android:id="@+id/rapierA0Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/rapierA1Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/rapierA2Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/rapierA3Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/rapierA4Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/rapierA5Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/rapierA6Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-                        </LinearLayout><!--rapier moves values-->
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="  "/>
-
-                            <Button
-                                android:id="@+id/motionD0Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/motionD1Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/motionD2Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="  "/>
-
-                            <Button
-                                android:id="@+id/rapierD0Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/rapierD1Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/rapierD2Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/rapierD3Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-                        </LinearLayout>
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4">
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textColor="#ffffff"
-                                android:text="Ruch: obrona"/>
-
-                            <Button
-                                android:id="@+id/motionD0"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Praca nóg" />
-
-                            <Button
-                                android:id="@+id/motionD1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Unik" />
-
-                            <Button
-                                android:id="@+id/motionD2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Odskok" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Rapier: Obrona" />
-
-                            <Button
-                                android:id="@+id/rapierD0"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Zasłona II" />
-
-                            <Button
-                                android:id="@+id/rapierD1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Zasłona I" />
-
-                            <Button
-                                android:id="@+id/rapierD2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Riposta" />
-
-                            <Button
-                                android:id="@+id/rapierD3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Wyprzedzenie" />
-                        </LinearLayout>
-                        </RelativeLayout>
-                </LinearLayout>
-                </LinearLayout><!--rapier-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/swordLayout"
-                    android:weightSum="10">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:weightSum="10">
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textColor="#ffffff"
-                                android:text="Zwarcie i atak w ruchu"/>
-
-                            <Button
-                                android:id="@+id/ScCombatA"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Zwarcie: Atak" />
-
-                            <Button
-                                android:id="@+id/ScCombatD"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Zwarcie: Obrona" />
-
-                            <Button
-                                android:id="@+id/SmotionA"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Ruch: Kroki" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textColor="#ffffff"
-                                android:text="Miecz: Atak"/>
-
-                            <Button
-                                android:id="@+id/swordA0"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Cięcie zwykłe" />
-
-                            <Button
-                                android:id="@+id/swordA1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Cięcie z zamachu" />
-
-                            <Button
-                                android:id="@+id/swordA2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Ponowienie" />
-
-                            <Button
-                                android:id="@+id/swordA3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="subtractOne"
-                                android:text="Zbicie miecza" />
-                        </LinearLayout><!--sword moves-->
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="  "/>
-
-                            <Button
-                                android:id="@+id/ScCombatAValue"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/ScCombatDValue"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/SmotionAValue"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="  "/>
-
-                            <Button
-                                android:id="@+id/swordA0Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/swordA1Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/swordA2Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/swordA3Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-
-                        </LinearLayout><!--sword moves values-->
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="  "/>
-
-                            <Button
-                                android:id="@+id/SmotionD0Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/SmotionD1Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/SmotionD2Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="  "/>
-
-                            <Button
-                                android:id="@+id/swordD0Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/swordD1Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                            <Button
-                                android:id="@+id/swordD2Value"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="addOne"
-                                android:text="0" />
-
-                        </LinearLayout>
                         <RelativeLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -1324,65 +712,689 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true">
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textColor="#ffffff"
-                                    android:text="Ruch: obrona"/>
-
+                                    android:text="Jazda"
+                                    />
                                 <Button
-                                    android:id="@+id/SmotionD0"
+                                    android:id="@+id/abi12"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:onClick="subtractOne"
-                                    android:text="Praca nóg" />
-
+                                    android:text=" Jeździectwo"
+                                    />
                                 <Button
-                                    android:id="@+id/SmotionD1"
+                                    android:id="@+id/abi13"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:onClick="subtractOne"
-                                    android:text="Unik" />
-
-                                <Button
-                                    android:id="@+id/SmotionD2"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:onClick="subtractOne"
-                                    android:text="Odskok" />
+                                    android:text="Post. ze zw"
+                                    />
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Miecz: Obrona" />
-
+                                    android:text="Wykształcenie"
+                                    android:textColor="#ffffff"
+                                    />
                                 <Button
-                                    android:id="@+id/swordD0"
+                                    android:id="@+id/abi14"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:onClick="subtractOne"
-                                    android:text="Odbicie" />
-
+                                    android:text=" Teologia"
+                                    />
                                 <Button
-                                    android:id="@+id/swordD1"
+                                    android:id="@+id/abi15"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:onClick="subtractOne"
-                                    android:text="Zasłona" />
-
+                                    android:text="Historia"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Praktyka"
+                                    android:textColor="#ffffff"
+                                    />
                                 <Button
-                                    android:id="@+id/swordD2"
+                                    android:id="@+id/abi16"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:onClick="subtractOne"
-                                    android:text="Wyprzedzenie" />
-                            </LinearLayout>
+                                    android:text=" Naprawa" />
+                                <Button
+                                    android:id="@+id/abi17"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Opatrywanie"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Łowiectow"
+                                    android:textColor="#ffffff"
+                                    />
+                                <Button
+                                    android:id="@+id/abi18"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text=" Przetrwanie"
+                                    />
+                                <Button
+                                    android:id="@+id/abi19"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Ukrywanie"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Dwór"
+                                    android:textColor="#ffffff"
+                                    />
+                                <Button
+                                    android:id="@+id/abi20"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text=" Plotki"
+                                    />
+                                <Button
+                                    android:id="@+id/abi21"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Etykieta"
+                                    />
+                            </LinearLayout><!--abi 11-21-->
                         </RelativeLayout>
-                    </LinearLayout>
-                </LinearLayout><!--sword-->
+                    </LinearLayout><!--abilities-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rapierLayout"
+                        android:weightSum="10"
+                        android:visibility="gone">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="10">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#ffffff"
+                                    android:text="Zwarcie i atak w ruchu"/>
 
-            </FrameLayout><!-- frame for abilities, rapier moves and sword moves-->
+                                <Button
+                                    android:id="@+id/cCombatA"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Zwarcie: Atak" />
 
-        </LinearLayout>
+                                <Button
+                                    android:id="@+id/cCombatD"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Zwarcie: Obrona" />
+
+                                <Button
+                                    android:id="@+id/motionA"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Ruch: Kroki" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#ffffff"
+                                    android:text="Rapier: Atak"/>
+
+                                <Button
+                                    android:id="@+id/rapierA0"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Pchnięcie proste" />
+
+                                <Button
+                                    android:id="@+id/rapierA1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Cięcie zwykłe" />
+
+                                <Button
+                                    android:id="@+id/rapierA2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Zwód" />
+
+                                <Button
+                                    android:id="@+id/rapierA3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Ponowienie" />
+
+                                <Button
+                                    android:id="@+id/rapierA4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="Wypad" />
+
+                                <Button
+                                    android:id="@+id/rapierA5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Pchnięcie pozorne" />
+
+                                <Button
+                                    android:id="@+id/rapierA6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Zbicie" />
+                            </LinearLayout><!--Rapier moves-->
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="  "/>
+
+                                <Button
+                                    android:id="@+id/cCombatAValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/cCombatDValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/motionAValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="  "/>
+
+                                <Button
+                                    android:id="@+id/rapierA0Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/rapierA1Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/rapierA2Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/rapierA3Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/rapierA4Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/rapierA5Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/rapierA6Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+                            </LinearLayout><!--rapier moves values-->
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="  "/>
+
+                                <Button
+                                    android:id="@+id/motionD0Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/motionD1Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/motionD2Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="  "/>
+
+                                <Button
+                                    android:id="@+id/rapierD0Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/rapierD1Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/rapierD2Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/rapierD3Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+                            </LinearLayout>
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4">
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#ffffff"
+                                        android:text="Ruch: obrona"/>
+
+                                    <Button
+                                        android:id="@+id/motionD0"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="subtractOne"
+                                        android:text="Praca nóg" />
+
+                                    <Button
+                                        android:id="@+id/motionD1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="subtractOne"
+                                        android:text="Unik" />
+
+                                    <Button
+                                        android:id="@+id/motionD2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="subtractOne"
+                                        android:text="Odskok" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Rapier: Obrona"
+                                        android:textColor="#ffffff"/>
+
+                                    <Button
+                                        android:id="@+id/rapierD0"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="subtractOne"
+                                        android:text="Zasłona II" />
+
+                                    <Button
+                                        android:id="@+id/rapierD1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="subtractOne"
+                                        android:text="Zasłona I" />
+
+                                    <Button
+                                        android:id="@+id/rapierD2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="subtractOne"
+                                        android:text="Riposta" />
+
+                                    <Button
+                                        android:id="@+id/rapierD3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="subtractOne"
+                                        android:text="Wyprzedzenie" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout><!--rapier-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/swordLayout"
+                        android:weightSum="10">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="10">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#ffffff"
+                                    android:text="Zwarcie i atak w ruchu"/>
+
+                                <Button
+                                    android:id="@+id/ScCombatA"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Zwarcie: Atak" />
+
+                                <Button
+                                    android:id="@+id/ScCombatD"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Zwarcie: Obrona" />
+
+                                <Button
+                                    android:id="@+id/SmotionA"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Ruch: Kroki" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#ffffff"
+                                    android:text="Miecz: Atak"/>
+
+                                <Button
+                                    android:id="@+id/swordA0"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Cięcie zwykłe" />
+
+                                <Button
+                                    android:id="@+id/swordA1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Cięcie z zamachu" />
+
+                                <Button
+                                    android:id="@+id/swordA2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Ponowienie" />
+
+                                <Button
+                                    android:id="@+id/swordA3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Zbicie miecza" />
+                            </LinearLayout><!--sword moves-->
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="  "/>
+
+                                <Button
+                                    android:id="@+id/ScCombatAValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/ScCombatDValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/SmotionAValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="  "/>
+
+                                <Button
+                                    android:id="@+id/swordA0Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/swordA1Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/swordA2Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/swordA3Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+
+                            </LinearLayout><!--sword moves values-->
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="  "/>
+
+                                <Button
+                                    android:id="@+id/SmotionD0Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/SmotionD1Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/SmotionD2Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="  "/>
+
+                                <Button
+                                    android:id="@+id/swordD0Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/swordD1Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                                <Button
+                                    android:id="@+id/swordD2Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="addOne"
+                                    android:text="0" />
+
+                            </LinearLayout>
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4">
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#ffffff"
+                                        android:text="Ruch: obrona"/>
+
+                                    <Button
+                                        android:id="@+id/SmotionD0"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="subtractOne"
+                                        android:text="Praca nóg" />
+
+                                    <Button
+                                        android:id="@+id/SmotionD1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="subtractOne"
+                                        android:text="Unik" />
+
+                                    <Button
+                                        android:id="@+id/SmotionD2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="subtractOne"
+                                        android:text="Odskok" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Miecz: Obrona"
+                                        android:textColor="#ffffff"/>
+
+                                    <Button
+                                        android:id="@+id/swordD0"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="subtractOne"
+                                        android:text="Odbicie" />
+
+                                    <Button
+                                        android:id="@+id/swordD1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="subtractOne"
+                                        android:text="Zasłona" />
+
+                                    <Button
+                                        android:id="@+id/swordD2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="subtractOne"
+                                        android:text="Wyprzedzenie" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout><!--sword-->
+
+                </FrameLayout><!-- frame for abilities, rapier moves and sword moves-->
+
+            </LinearLayout>
         </ScrollView><!-- frame that allow to scroll if view is to big to fit on a screen-->
 
     </FrameLayout><!--frame that stores background image-->
