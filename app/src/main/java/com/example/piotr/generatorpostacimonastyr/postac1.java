@@ -27,25 +27,39 @@ public class postac1 extends AppCompatActivity {
         Button[] auxiliaryFactorValue = new Button[6];
         Button[] abilities = new Button[22];
         Button[] motion = new Button[4];
+        Button[] Smotion = new Button [4]; // motion buttons in sword layout
         Button[] rapierA = new Button[7];
         Button[] rapierD = new Button[4];
         Button[] swordA = new Button[4];
         Button[] swordD = new Button[3];
         Button[] closeC = new Button[2];
+        Button[] ScloseC = new Button[2];
 
         closeC[0]=findViewById(R.id.cCombatAValue);
         closeC[0].setText(Integer.toString(character.AkcjeZwarcie[0]));
-
         closeC[1]=findViewById(R.id.cCombatDValue);
         closeC[1].setText(Integer.toString(character.AkcjeZwarcie[1]));
 
-        motion[0]=findViewById(R.id.motionAValue);
+        ScloseC[0]=findViewById(R.id.ScCombatAValue);
+        ScloseC[0].setText(Integer.toString(character.AkcjeZwarcie[0]));
+        ScloseC[1]=findViewById(R.id.ScCombatDValue);
+        ScloseC[1].setText(Integer.toString(character.AkcjeZwarcie[1]));
+
+
+        motion[0]=findViewById(R.id.SmotionAValue);
         motion[0].setText(Integer.toString(character.AkcjeRuch[0]));
+        Smotion[0]=findViewById(R.id.SmotionAValue);
+        Smotion[0].setText(Integer.toString(character.AkcjeRuch[0]));
         for(int i=1;i<motion.length;i++){
             String source = "motionD" + Integer.toString(i-1)+"Value";
+            String source2 = "SmotionD" + Integer.toString(i-1)+"Value";
             int id = getResources().getIdentifier(source,"id",getPackageName());
+            int id2 = getResources().getIdentifier(source2,"id",getPackageName());
             motion[i]=findViewById(id);
             motion[i].setText(Integer.toString(character.AkcjeRuch[i]));
+            Smotion[i]=findViewById(id2);
+            Smotion[i].setText(Integer.toString(character.AkcjeRuch[i]));
+
         }
         for(int i=0;i<rapierA.length;i++){
             String source = "rapierA"+Integer.toString(i)+"Value";
@@ -71,6 +85,7 @@ public class postac1 extends AppCompatActivity {
             rapierD[i]=findViewById(id);
             rapierD[i].setText(Integer.toString(character.AkcjeMieczObrona[i]));
         }
+
             for (int i = 0; i < mainFactorValue.length; i++) {
                 String source = "wspGValue" + Integer.toString(i + 1);
                 int id = getResources().getIdentifier(source, "id", getPackageName());
