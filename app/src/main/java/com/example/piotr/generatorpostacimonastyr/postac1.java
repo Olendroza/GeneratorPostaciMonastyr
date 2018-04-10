@@ -120,6 +120,23 @@ public class postac1 extends AppCompatActivity {
                     buttonClicked.setText(Integer.toString(this.character.AkcjeRuch[numberOfaction]));
                 }
             }
+            else if(id.contains("rapier"))
+            {
+               if(id.contains("rapierA")){
+                   id=id.replace("Value","");
+                   String numberString = id.substring(id.length()-1);
+                   int numberOfmove = Integer.parseInt(numberString);
+                   this.character.AkcjeRapierAtak[numberOfmove]++;
+                   buttonClicked.setText(Integer.toString(this.character.AkcjeRapierAtak[numberOfmove]));
+               }
+               else{
+                   id=id.replace("Value","");
+                   String numberString = id.substring(id.length()-1);
+                   int numberOfmove = Integer.parseInt(numberString);
+                   this.character.AkcjeRapierObrona[numberOfmove]++;
+                   buttonClicked.setText(Integer.toString(this.character.AkcjeRapierObrona[numberOfmove]));
+               }
+            }
         }
     public void subtractOne(View view){
         String id = view.getResources().getResourceName(view.getId());
