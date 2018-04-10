@@ -2,6 +2,7 @@ package com.example.piotr.generatorpostacimonastyr;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -271,13 +272,21 @@ public class postac1 extends AppCompatActivity {
     public void changeViev(View view){
         LinearLayout abiLayout = findViewById(R.id.abilitiesLayout);
         LinearLayout rapierLayout = findViewById(R.id.rapierLayout);
-        if(abiLayout.getVisibility()==View.GONE){
+        LinearLayout swordLayout = findViewById(R.id.swordLayout);
+        if(rapierLayout.getVisibility()==View.VISIBLE){
+            abiLayout.setVisibility(View.GONE);
+            rapierLayout.setVisibility(View.GONE);
+            swordLayout.setVisibility(View.VISIBLE);
+        }
+        else if(swordLayout.getVisibility()==View.VISIBLE){
             abiLayout.setVisibility(View.VISIBLE);
             rapierLayout.setVisibility(View.GONE);
+            swordLayout.setVisibility(View.GONE);
         }
-        else {
+        else if(abiLayout.getVisibility()==View.VISIBLE){
             abiLayout.setVisibility(View.GONE);
             rapierLayout.setVisibility(View.VISIBLE);
+            swordLayout.setVisibility(View.GONE);
         }
     }
 
