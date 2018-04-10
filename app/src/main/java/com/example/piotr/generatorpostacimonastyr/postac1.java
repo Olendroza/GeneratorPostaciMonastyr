@@ -22,7 +22,6 @@ public class postac1 extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_FULLSCREEN
                         | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
-
         Button[] mainFactorValue = new Button[8];
         Button[] auxiliaryFactorValue = new Button[6];
         Button[] abilities = new Button[22];
@@ -45,7 +44,6 @@ public class postac1 extends AppCompatActivity {
             motion[i]=findViewById(id);
             motion[i].setText(Integer.toString(character.AkcjeRuch[i]));
         }
-        //<!--debagowac-->
         for(int i=0;i<rapierA.length;i++){
             String source = "rapierA"+Integer.toString(i)+"Value";
             int id = getResources().getIdentifier(source,"id",getPackageName());
@@ -76,8 +74,8 @@ public class postac1 extends AppCompatActivity {
                 abilities[i]=findViewById(id);
                 abilities[i].setText(Integer.toString(character.Umiejetnosci[i]));
             }
-
         }
+
         public void addOne(View view){
         Button buttonClicked = findViewById(view.getId());
         String id = view.getResources().getResourceName(view.getId());
@@ -100,6 +98,14 @@ public class postac1 extends AppCompatActivity {
                 int numberOfability = Integer.parseInt(numberString);
                 this.character.Umiejetnosci[numberOfability]++;
                 buttonClicked.setText(Integer.toString(this.character.Umiejetnosci[numberOfability]));
+            }
+            else if(id.contains("cCombatA")) {
+                this.character.AkcjeZwarcie[0]++;
+                buttonClicked.setText(Integer.toString(this.character.AkcjeZwarcie[0]));
+            }
+            else if(id.contains("cCombatD")) {
+                this.character.AkcjeZwarcie[1]++;
+                buttonClicked.setText(Integer.toString(this.character.AkcjeZwarcie[1]));
             }
         }
     public void subtractOne(View view){

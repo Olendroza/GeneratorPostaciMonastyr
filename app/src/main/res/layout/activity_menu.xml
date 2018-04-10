@@ -11,28 +11,19 @@
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteY="126dp">
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:scaleType="centerCrop"
             android:src="@drawable/backg" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Monastyr Generator Postaci"
-            android:layout_gravity="top"
-            android:gravity="center"
-            android:textSize="26sp"
-            android:textColor="#ffffff"
-            android:layout_marginTop="24dp"/>
+
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            >
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/button1"
@@ -68,7 +59,18 @@
                 android:onClick="notReady"
                 android:text="Wyjdź"
                 android:textColor="#ffffff" />
+
         </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Monastyr Generator Postaci"
+            android:textColor="#ffffff"
+            android:textSize="26sp" />
     </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>
