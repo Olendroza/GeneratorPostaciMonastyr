@@ -30,10 +30,10 @@ public class postac1 extends AppCompatActivity {
         Button[] rapierD = new Button[4];
         Button[] closeC = new Button[2];
 
-        closeC[0]=findViewById(R.id.cCombatA);
+        closeC[0]=findViewById(R.id.cCombatAValue);
         closeC[0].setText(Integer.toString(character.AkcjeZwarcie[0]));
 
-        closeC[1]=findViewById(R.id.cCombatD);
+        closeC[1]=findViewById(R.id.cCombatDValue);
         closeC[1].setText(Integer.toString(character.AkcjeZwarcie[1]));
 
         motion[0]=findViewById(R.id.motionAValue);

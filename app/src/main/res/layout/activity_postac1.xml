@@ -809,7 +809,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/rapierLayout"
-                    android:weightSum="10">
+                    android:weightSum="10"
+                    android:visibility="gone">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1118,6 +1119,267 @@
                         </RelativeLayout>
                 </LinearLayout>
                 </LinearLayout><!--rapier-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/swordLayout"
+                    android:weightSum="10">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="10">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#ffffff"
+                                android:text="Zwarcie i atak w ruchu"/>
+
+                            <Button
+                                android:id="@id/cCombatA"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text="Zwarcie: Atak" />
+
+                            <Button
+                                android:id="@id/cCombatD"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text="Zwarcie: Obrona" />
+
+                            <Button
+                                android:id="@id/motionA"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text="Ruch: Kroki" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#ffffff"
+                                android:text="Miecz: Atak"/>
+
+                            <Button
+                                android:id="@+id/swordA0"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text="Cięcie zwykłe" />
+
+                            <Button
+                                android:id="@+id/swordA1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text="Cięcie z zamachu" />
+
+                            <Button
+                                android:id="@+id/swordA2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text="Ponowienie" />
+
+                            <Button
+                                android:id="@+id/swordA3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="subtractOne"
+                                android:text="Zbicie miecza" />
+                        </LinearLayout><!--sword moves-->
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="  "/>
+
+                            <Button
+                                android:id="@id/cCombatAValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="addOne"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@id/cCombatDValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="addOne"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@id/motionAValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="addOne"
+                                android:text="0" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="  "/>
+
+                            <Button
+                                android:id="@+id/swordA0Value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="addOne"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/swordA1Value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="addOne"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/swordA2Value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="addOne"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/swordrA3Value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="addOne"
+                                android:text="0" />
+
+
+                        </LinearLayout><!--sword moves values-->
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="  "/>
+
+                            <Button
+                                android:id="@id/motionD0Value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="addOne"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@id/motionD1Value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="addOne"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@id/motionD2Value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="addOne"
+                                android:text="0" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="  "/>
+
+                            <Button
+                                android:id="@+id/swordD0Value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="addOne"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/swordD1Value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="addOne"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/swordD2Value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="addOne"
+                                android:text="0" />
+
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#ffffff"
+                                    android:text="Ruch: obrona"/>
+
+                                <Button
+                                    android:id="@id/motionD0"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Praca nóg" />
+
+                                <Button
+                                    android:id="@id/motionD1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Unik" />
+
+                                <Button
+                                    android:id="@id/motionD2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Odskok" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Miecz: Obrona" />
+
+                                <Button
+                                    android:id="@+id/swordD0"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Odbicie" />
+
+                                <Button
+                                    android:id="@+id/swordrD1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Zasłona" />
+
+                                <Button
+                                    android:id="@+id/swordD2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="subtractOne"
+                                    android:text="Wyprzedzenie" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout><!--sword-->
+
             </FrameLayout><!-- frame for abilities, rapier moves and sword moves-->
 
         </LinearLayout>
