@@ -164,6 +164,49 @@ public class postac1 extends AppCompatActivity {
             this.character.Umiejetnosci[numberOfability]--;
             buttonValue.setText(Integer.toString(this.character.Umiejetnosci[numberOfability]));
         }
+        else if(id.contains("cCombatA")){
+            newId = id+"Value";
+            buttonValue = findViewById(getResources().getIdentifier(newId,"id",getPackageName()));
+            this.character.AkcjeZwarcie[0]--;
+            buttonValue.setText(Integer.toString(this.character.AkcjeZwarcie[0]));
+        }
+        else if(id.contains("cCombatD")) {
+            newId = id+"Value";
+            buttonValue = findViewById(getResources().getIdentifier(newId,"id",getPackageName()));
+            this.character.AkcjeZwarcie[1]--;
+            buttonValue.setText(Integer.toString(this.character.AkcjeZwarcie[1]));
+        }
+        else if(id.contains("motion")){
+            if(id.contains("motionA")){
+                this.character.AkcjeRuch[0]--;
+                buttonValue.setText(Integer.toString(this.character.AkcjeRuch[0]));
+            }
+            else{
+                id=id.replace("Value","");
+                String numberString = id.substring(id.length()-1);
+                int numberOfaction = Integer.parseInt(numberString)+1;
+                this.character.AkcjeRuch[numberOfaction]--;
+                buttonValue.setText(Integer.toString(this.character.AkcjeRuch[numberOfaction]));
+            }
+        }
+        else if(id.contains("rapier"))
+        {
+            if(id.contains("rapierA")){
+                id=id.replace("Value","");
+                String numberString = id.substring(id.length()-1);
+                int numberOfmove = Integer.parseInt(numberString);
+                this.character.AkcjeRapierAtak[numberOfmove]--;
+                buttonValue.setText(Integer.toString(this.character.AkcjeRapierAtak[numberOfmove]));
+            }
+            else{
+                id=id.replace("Value","");
+                String numberString = id.substring(id.length()-1);
+                int numberOfmove = Integer.parseInt(numberString);
+                this.character.AkcjeRapierObrona[numberOfmove]--;
+                buttonValue.setText(Integer.toString(this.character.AkcjeRapierObrona[numberOfmove]));
+            }
+        }
+
 
     }
     public void changeViev(View view){
