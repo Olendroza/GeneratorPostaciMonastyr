@@ -29,8 +29,8 @@ public class postac1 extends AppCompatActivity {
         Button[] motion = new Button[4];
         Button[] rapierA = new Button[7];
         Button[] rapierD = new Button[4];
-        Button[] swordA = new Button[3];
-        Button[] swordD = new Button[2];
+        Button[] swordA = new Button[4];
+        Button[] swordD = new Button[3];
         Button[] closeC = new Button[2];
 
         closeC[0]=findViewById(R.id.cCombatAValue);

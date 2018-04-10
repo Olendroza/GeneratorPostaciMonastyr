@@ -1140,21 +1140,21 @@
                                 android:text="Zwarcie i atak w ruchu"/>
 
                             <Button
-                                android:id="@id/cCombatA"
+                                android:id="@+id/ScCombatA"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:onClick="subtractOne"
                                 android:text="Zwarcie: Atak" />
 
                             <Button
-                                android:id="@id/cCombatD"
+                                android:id="@+id/ScCombatD"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:onClick="subtractOne"
                                 android:text="Zwarcie: Obrona" />
 
                             <Button
-                                android:id="@id/motionA"
+                                android:id="@+id/SmotionA"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:onClick="subtractOne"
@@ -1204,21 +1204,21 @@
                                 android:text="  "/>
 
                             <Button
-                                android:id="@id/cCombatAValue"
+                                android:id="@+id/ScCombatAValue"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:onClick="addOne"
                                 android:text="0" />
 
                             <Button
-                                android:id="@id/cCombatDValue"
+                                android:id="@+id/ScCombatDValue"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:onClick="addOne"
                                 android:text="0" />
 
                             <Button
-                                android:id="@id/motionAValue"
+                                android:id="@+id/SmotionAValue"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:onClick="addOne"
@@ -1250,7 +1250,7 @@
                                 android:text="0" />
 
                             <Button
-                                android:id="@+id/swordrA3Value"
+                                android:id="@+id/swordA3Value"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:onClick="addOne"
@@ -1269,21 +1269,21 @@
                                 android:text="  "/>
 
                             <Button
-                                android:id="@id/motionD0Value"
+                                android:id="@+id/SmotionD0Value"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:onClick="addOne"
                                 android:text="0" />
 
                             <Button
-                                android:id="@id/motionD1Value"
+                                android:id="@+id/SmotionD1Value"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:onClick="addOne"
                                 android:text="0" />
 
                             <Button
-                                android:id="@id/motionD2Value"
+                                android:id="@+id/SmotionD2Value"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:onClick="addOne"
@@ -1331,21 +1331,21 @@
                                     android:text="Ruch: obrona"/>
 
                                 <Button
-                                    android:id="@id/motionD0"
+                                    android:id="@+id/SmotionD0"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:onClick="subtractOne"
                                     android:text="Praca nóg" />
 
                                 <Button
-                                    android:id="@id/motionD1"
+                                    android:id="@+id/SmotionD1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:onClick="subtractOne"
                                     android:text="Unik" />
 
                                 <Button
-                                    android:id="@id/motionD2"
+                                    android:id="@+id/SmotionD2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:onClick="subtractOne"
