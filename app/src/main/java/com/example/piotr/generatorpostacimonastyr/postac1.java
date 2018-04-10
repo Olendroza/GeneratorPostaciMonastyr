@@ -28,6 +28,8 @@ public class postac1 extends AppCompatActivity {
         Button[] motion = new Button[4];
         Button[] rapierA = new Button[7];
         Button[] rapierD = new Button[4];
+        Button[] swordA = new Button[3];
+        Button[] swordD = new Button[2];
         Button[] closeC = new Button[2];
 
         closeC[0]=findViewById(R.id.cCombatAValue);
@@ -55,6 +57,18 @@ public class postac1 extends AppCompatActivity {
             int id = getResources().getIdentifier(source,"id",getPackageName());
             rapierD[i]=findViewById(id);
             rapierD[i].setText(Integer.toString(character.AkcjeRapierObrona[i]));
+        }
+        for(int i=0;i<swordA.length;i++){
+            String source = "swordA"+Integer.toString(i)+"Value";
+            int id = getResources().getIdentifier(source,"id",getPackageName());
+            rapierA[i]=findViewById(id);
+            rapierA[i].setText(Integer.toString(character.AkcjeMieczAtak[i]));
+        }
+        for(int i=0;i<swordD.length;i++){
+            String source = "swordD"+Integer.toString(i)+"Value";
+            int id = getResources().getIdentifier(source,"id",getPackageName());
+            rapierD[i]=findViewById(id);
+            rapierD[i].setText(Integer.toString(character.AkcjeMieczObrona[i]));
         }
             for (int i = 0; i < mainFactorValue.length; i++) {
                 String source = "wspGValue" + Integer.toString(i + 1);
