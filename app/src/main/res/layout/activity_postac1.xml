@@ -24,7 +24,8 @@
 
                 <ScrollView
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp">
                     <LinearLayout
                         android:orientation="vertical"
                         android:id="@+id/relLay1"
@@ -1409,8 +1410,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="temp!!!"/>
-                </LinearLayout>
-            </RelativeLayout>
+                </LinearLayout><!--bottom menu bar-->
+            </RelativeLayout> <!--stores scroll view and bottom menu bar-->
 
     </FrameLayout><!--frame that stores background image-->
 </android.support.constraint.ConstraintLayout>
