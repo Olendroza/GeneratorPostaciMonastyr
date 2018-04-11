@@ -1,7 +1,10 @@
 package com.example.piotr.generatorpostacimonastyr;
 
+import android.content.res.AssetManager;
+
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -24,37 +27,17 @@ public class Postac {
         int[] AkcjeMieczAtak = new int [4];
         int[] AkcjeMieczObrona = new int[3];
 
-        public Postac() {
+        public Postac(String imionaM, String imionaZ) {
             Random generator= new Random();
 
-            /* //name of this creature
             int plec= generator.nextInt(2);
-            String[] meskieimiona = new String[200];
-            String[] damskieimiona = new String[200];
-            if(plec==0) {
-                int m=0;
-                File meskie = new File("imionam.txt");
-                Scanner czytajm = new Scanner(meskie);
-                while(czytajm.hasNextLine()) {
-                    meskieimiona[m]=czytajm.nextLine();
-                    m++;
-                }
-                int losowaniem =(int)Math.round(Math.random()*(m-2));
-                this.imie=meskieimiona[losowaniem];
-            }
+            String[] meskieimiona = imionaM.split("\\n");
+            String[] damskieimiona = imionaZ.split("\\n");
+            if(plec==0)
+                this.imie=meskieimiona[generator.nextInt(meskieimiona.length)];
+            else
+                this.imie=damskieimiona[generator.nextInt(damskieimiona.length)];
 
-            else {
-                int k=0;
-                File damskie=new File("imionak.txt");
-                Scanner czytajd = new Scanner(damskie);
-                while(czytajd.hasNextLine()) {
-                    damskieimiona[k]=czytajd.nextLine();
-                    k++;
-                }
-                int losowanied =(int)Math.round(Math.random()*(k-2));
-                this.imie=damskieimiona[losowanied];
-            }
-            */
             //main coefficients
             for(int i=0;i<this.WspolczynnikiGlowne.length;i++) {
                 this.WspolczynnikiGlowne[i] = generator.nextInt(14)+6;
