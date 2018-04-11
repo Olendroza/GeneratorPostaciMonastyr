@@ -1405,7 +1405,7 @@
                         android:id="@+id/ChangeViewAbi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentbegin="true"
+                        android:layout_alignParentStart="true"
                         android:tag="0"
                         android:onClick="changeViev"
                         android:text="Umi" />
