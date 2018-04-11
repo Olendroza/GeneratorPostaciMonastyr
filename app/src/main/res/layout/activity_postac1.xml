@@ -1425,6 +1425,21 @@
                         android:tag="2"
                         android:onClick="changeViev"
                         android:text="Rap" />
+                    <Button
+                        android:id="@+id/saveButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/ChangeCharacter"
+                        android:tag="2"
+                        android:onClick="changeViev"
+                        android:text="Zapisz" />
+                    <Button
+                        android:id="@+id/ChangeCharacter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:onClick="changeViev"
+                        android:text="Postać" />
                 </RelativeLayout>
 
             </RelativeLayout> <!--stores scroll view and bottom menu bar-->
