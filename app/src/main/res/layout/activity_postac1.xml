@@ -25,7 +25,7 @@
                 <ScrollView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp">
+                    android:layout_marginBottom="48dp">
                     <LinearLayout
                         android:orientation="vertical"
                         android:id="@+id/relLay1"
@@ -272,13 +272,7 @@
                                     android:text="Rany  "
                                     />
 
-                                <Button
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_alignParentEnd="true"
-                                    android:layout_below="@+id/rany"
-                                    android:onClick="changeViev"
-                                    android:text="Zmień widok" />
+
 
                                 <LinearLayout
                                     android:layout_width="wrap_content"
@@ -1401,16 +1395,38 @@
 
                     </LinearLayout>
                 </ScrollView><!-- frame that allow to scroll if view is to big to fit on a screen-->
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#ffffff"
                     android:layout_alignParentBottom="true">
-                    <TextView
+
+                    <Button
+                        android:id="@+id/ChangeViewAbi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="temp!!!"/>
-                </LinearLayout><!--bottom menu bar-->
+                        android:layout_alignParentbegin="true"
+                        android:tag="0"
+                        android:onClick="changeViev"
+                        android:text="Umi" />
+                    <Button
+                        android:id="@+id/ChangeViewSword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/ChangeViewAbi"
+                        android:tag="1"
+                        android:onClick="changeViev"
+                        android:text="Mie" />
+                    <Button
+                        android:id="@+id/ChangeViewRapier"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/ChangeViewSword"
+                        android:tag="2"
+                        android:onClick="changeViev"
+                        android:text="Rap" />
+                </RelativeLayout>
+
             </RelativeLayout> <!--stores scroll view and bottom menu bar-->
 
     </FrameLayout><!--frame that stores background image-->
