@@ -145,5 +145,40 @@ public class Postac {
                 AkcjeZwarcie[los]++;
             }
         }
+    public void Zapisz() {
+
+        String record ="";
+        record+=imie+",";
+        record+=SumaWspolczynnikowGlownych+",";
+        record+=Rany+",";
+        for(int i=0;i< 8;i++) {
+            record+=WspolczynnikiGlowne[i]+",";
+        }
+        for(int i=0;i<5 ;i++) {
+            record+=WspolczynnikiPomocnicze[i]+",";
+        }
+        for(int i=0;i< 22;i++) {
+            record+=Umiejetnosci[i]+",";
+        }
+        for(int i=0;i< 4;i++) {
+            record+=AkcjeRuch[i]+",";
+        }
+        for(int i=0;i<2 ;i++) {
+            record+=AkcjeZwarcie[i]+",";
+        }
+        for(int i=0;i< 7;i++) {
+            record+=AkcjeRapierAtak[i]+",";
+        }
+        for(int i=0;i< 4;i++) {
+            record+=AkcjeRapierObrona[i]+",";
+        }
+        for(int i=0;i<4 ;i++) {
+            record+=AkcjeMieczAtak[i]+",";
+        }
+        for(int i=0;i<3 ;i++) {
+            record+=AkcjeMieczObrona[i]+",";
+        }
+        record+=";";
+    }
 
     }
