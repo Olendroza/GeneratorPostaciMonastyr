@@ -7,11 +7,13 @@ import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class postac1 extends AppCompatActivity {
 
-    Postac character;
+    Postac character= new Postac("noname","noname");
+    Boolean created=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +27,6 @@ public class postac1 extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_FULLSCREEN
                         | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
-        Bundle extras = getIntent().getExtras();
-        String malenames = extras.getString("m");
-        String femalenames = extras.getString("f");
-        character = new Postac(malenames,femalenames);
 
         Button[] mainFactorValue = new Button[8];
         Button[] auxiliaryFactorValue = new Button[6];
@@ -42,56 +40,66 @@ public class postac1 extends AppCompatActivity {
         Button[] closeC = new Button[2];
         Button[] ScloseC = new Button[2];
 
-        closeC[0]=findViewById(R.id.cCombatAValue);
-        closeC[0].setText(Integer.toString(character.AkcjeZwarcie[0]));
-        closeC[1]=findViewById(R.id.cCombatDValue);
-        closeC[1].setText(Integer.toString(character.AkcjeZwarcie[1]));
+        TextView name= findViewById(R.id.imie);
 
-        ScloseC[0]=findViewById(R.id.ScCombatAValue);
-        ScloseC[0].setText(Integer.toString(character.AkcjeZwarcie[0]));
-        ScloseC[1]=findViewById(R.id.ScCombatDValue);
-        ScloseC[1].setText(Integer.toString(character.AkcjeZwarcie[1]));
+        if(savedInstanceState==null){
+            Bundle extras = getIntent().getExtras();
+            String malenames = extras.getString("m");
+            String femalenames = extras.getString("f");
+            character = new Postac(malenames,femalenames);
+
+            name.setText(character.imie);
+
+            closeC[0]=findViewById(R.id.cCombatAValue);
+            closeC[0].setText(Integer.toString(character.AkcjeZwarcie[0]));
+            closeC[1]=findViewById(R.id.cCombatDValue);
+            closeC[1].setText(Integer.toString(character.AkcjeZwarcie[1]));
+
+            ScloseC[0]=findViewById(R.id.ScCombatAValue);
+            ScloseC[0].setText(Integer.toString(character.AkcjeZwarcie[0]));
+            ScloseC[1]=findViewById(R.id.ScCombatDValue);
+            ScloseC[1].setText(Integer.toString(character.AkcjeZwarcie[1]));
 
 
-        motion[0]=findViewById(R.id.SmotionAValue);
-        motion[0].setText(Integer.toString(character.AkcjeRuch[0]));
-        Smotion[0]=findViewById(R.id.SmotionAValue);
-        Smotion[0].setText(Integer.toString(character.AkcjeRuch[0]));
-        for(int i=1;i<motion.length;i++){
-            String source = "motionD" + Integer.toString(i-1)+"Value";
-            String source2 = "SmotionD" + Integer.toString(i-1)+"Value";
-            int id = getResources().getIdentifier(source,"id",getPackageName());
-            int id2 = getResources().getIdentifier(source2,"id",getPackageName());
-            motion[i]=findViewById(id);
-            motion[i].setText(Integer.toString(character.AkcjeRuch[i]));
-            Smotion[i]=findViewById(id2);
-            Smotion[i].setText(Integer.toString(character.AkcjeRuch[i]));
+            motion[0]=findViewById(R.id.SmotionAValue);
+            motion[0].setText(Integer.toString(character.AkcjeRuch[0]));
+            Smotion[0]=findViewById(R.id.SmotionAValue);
+            Smotion[0].setText(Integer.toString(character.AkcjeRuch[0]));
+            for(int i=1;i<motion.length;i++){
+                String source = "motionD" + Integer.toString(i-1)+"Value";
+                String source2 = "SmotionD" + Integer.toString(i-1)+"Value";
+                int id = getResources().getIdentifier(source,"id",getPackageName());
+                int id2 = getResources().getIdentifier(source2,"id",getPackageName());
+                motion[i]=findViewById(id);
+                motion[i].setText(Integer.toString(character.AkcjeRuch[i]));
+                Smotion[i]=findViewById(id2);
+                Smotion[i].setText(Integer.toString(character.AkcjeRuch[i]));
 
-        }
-        for(int i=0;i<rapierA.length;i++){
-            String source = "rapierA"+Integer.toString(i)+"Value";
-            int id = getResources().getIdentifier(source,"id",getPackageName());
-            rapierA[i]=findViewById(id);
-            rapierA[i].setText(Integer.toString(character.AkcjeRapierAtak[i]));
-        }
-        for(int i=0;i<rapierD.length;i++){
-            String source = "rapierD"+Integer.toString(i)+"Value";
-            int id = getResources().getIdentifier(source,"id",getPackageName());
-            rapierD[i]=findViewById(id);
-            rapierD[i].setText(Integer.toString(character.AkcjeRapierObrona[i]));
-        }
-        for(int i=0;i<swordA.length;i++){
-            String source = "swordA"+Integer.toString(i)+"Value";
-            int id = getResources().getIdentifier(source,"id",getPackageName());
-            rapierA[i]=findViewById(id);
-            rapierA[i].setText(Integer.toString(character.AkcjeMieczAtak[i]));
-        }
-        for(int i=0;i<swordD.length;i++){
-            String source = "swordD"+Integer.toString(i)+"Value";
-            int id = getResources().getIdentifier(source,"id",getPackageName());
-            rapierD[i]=findViewById(id);
-            rapierD[i].setText(Integer.toString(character.AkcjeMieczObrona[i]));
-        }
+            }
+            for(int i=0;i<rapierA.length;i++){
+                String source = "rapierA"+Integer.toString(i)+"Value";
+                int id = getResources().getIdentifier(source,"id",getPackageName());
+                rapierA[i]=findViewById(id);
+                rapierA[i].setText(Integer.toString(character.AkcjeRapierAtak[i]));
+            }
+            for(int i=0;i<rapierD.length;i++){
+                String source = "rapierD"+Integer.toString(i)+"Value";
+                int id = getResources().getIdentifier(source,"id",getPackageName());
+                rapierD[i]=findViewById(id);
+                rapierD[i].setText(Integer.toString(character.AkcjeRapierObrona[i]));
+            }
+            for(int i=0;i<swordA.length;i++){
+                String source = "swordA"+Integer.toString(i)+"Value";
+                int id = getResources().getIdentifier(source,"id",getPackageName());
+                rapierA[i]=findViewById(id);
+                rapierA[i].setText(Integer.toString(character.AkcjeMieczAtak[i]));
+            }
+            for(int i=0;i<swordD.length;i++){
+                String source = "swordD"+Integer.toString(i)+"Value";
+                int id = getResources().getIdentifier(source,"id",getPackageName());
+                rapierD[i]=findViewById(id);
+                rapierD[i].setText(Integer.toString(character.AkcjeMieczObrona[i]));
+            }
 
             for (int i = 0; i < mainFactorValue.length; i++) {
                 String source = "wspGValue" + Integer.toString(i + 1);
@@ -112,6 +120,129 @@ public class postac1 extends AppCompatActivity {
                 abilities[i].setText(Integer.toString(character.Umiejetnosci[i]));
             }
         }
+        else {
+            character.imie = savedInstanceState.getString("name");
+
+            character.SumaWspolczynnikowGlownych = savedInstanceState.getInt("factorsSum");
+            for(int i=0;i<character.WspolczynnikiGlowne.length;i++)
+            character.WspolczynnikiGlowne[i]= savedInstanceState.getInt("mainFactors"+Integer.toString(i));
+            for(int i=0;i<character.WspolczynnikiPomocnicze.length;i++)
+            character.WspolczynnikiPomocnicze[i]= savedInstanceState.getInt("auxiliaryFactors"+Integer.toString(i));
+            for(int i=0;i<character.Umiejetnosci.length;i++)
+            character.Umiejetnosci[i]= savedInstanceState.getInt("abi"+Integer.toString(i));
+            for(int i=0;i<character.AkcjeRuch.length;i++)
+            character.AkcjeRuch[i]= savedInstanceState.getInt("actionMove"+Integer.toString(i));
+            for(int i=0;i<character.AkcjeZwarcie.length;i++)
+            character.AkcjeZwarcie[i]= savedInstanceState.getInt("actionCloseCombat"+Integer.toString(i));
+            for(int i=0;i<character.AkcjeRapierAtak.length;i++)
+            character.AkcjeRapierAtak[i]= savedInstanceState.getInt("actionRapierAttack"+Integer.toString(i));
+            for(int i=0;i<character.AkcjeRapierObrona.length;i++)
+            character.AkcjeRapierObrona[i]= savedInstanceState.getInt("actionRapierDefence"+Integer.toString(i));
+            for(int i=0;i<character.AkcjeMieczAtak.length;i++)
+            character.AkcjeMieczAtak[i]= savedInstanceState.getInt("actionSwordAttack"+Integer.toString(i));
+            for(int i=0;i<character.AkcjeMieczObrona.length;i++)
+            character.AkcjeMieczObrona[i]= savedInstanceState.getInt("actionSwordDefence"+Integer.toString(i));
+
+            name.setText(character.imie);
+            closeC[0]=findViewById(R.id.cCombatAValue);
+            closeC[0].setText(Integer.toString(character.AkcjeZwarcie[0]));
+            closeC[1]=findViewById(R.id.cCombatDValue);
+            closeC[1].setText(Integer.toString(character.AkcjeZwarcie[1]));
+
+            ScloseC[0]=findViewById(R.id.ScCombatAValue);
+            ScloseC[0].setText(Integer.toString(character.AkcjeZwarcie[0]));
+            ScloseC[1]=findViewById(R.id.ScCombatDValue);
+            ScloseC[1].setText(Integer.toString(character.AkcjeZwarcie[1]));
+
+
+            motion[0]=findViewById(R.id.SmotionAValue);
+            motion[0].setText(Integer.toString(character.AkcjeRuch[0]));
+            Smotion[0]=findViewById(R.id.SmotionAValue);
+            Smotion[0].setText(Integer.toString(character.AkcjeRuch[0]));
+            for(int i=1;i<motion.length;i++){
+                String source = "motionD" + Integer.toString(i-1)+"Value";
+                String source2 = "SmotionD" + Integer.toString(i-1)+"Value";
+                int id = getResources().getIdentifier(source,"id",getPackageName());
+                int id2 = getResources().getIdentifier(source2,"id",getPackageName());
+                motion[i]=findViewById(id);
+                motion[i].setText(Integer.toString(character.AkcjeRuch[i]));
+                Smotion[i]=findViewById(id2);
+                Smotion[i].setText(Integer.toString(character.AkcjeRuch[i]));
+
+            }
+            for(int i=0;i<rapierA.length;i++){
+                String source = "rapierA"+Integer.toString(i)+"Value";
+                int id = getResources().getIdentifier(source,"id",getPackageName());
+                rapierA[i]=findViewById(id);
+                rapierA[i].setText(Integer.toString(character.AkcjeRapierAtak[i]));
+            }
+            for(int i=0;i<rapierD.length;i++){
+                String source = "rapierD"+Integer.toString(i)+"Value";
+                int id = getResources().getIdentifier(source,"id",getPackageName());
+                rapierD[i]=findViewById(id);
+                rapierD[i].setText(Integer.toString(character.AkcjeRapierObrona[i]));
+            }
+            for(int i=0;i<swordA.length;i++){
+                String source = "swordA"+Integer.toString(i)+"Value";
+                int id = getResources().getIdentifier(source,"id",getPackageName());
+                rapierA[i]=findViewById(id);
+                rapierA[i].setText(Integer.toString(character.AkcjeMieczAtak[i]));
+            }
+            for(int i=0;i<swordD.length;i++){
+                String source = "swordD"+Integer.toString(i)+"Value";
+                int id = getResources().getIdentifier(source,"id",getPackageName());
+                rapierD[i]=findViewById(id);
+                rapierD[i].setText(Integer.toString(character.AkcjeMieczObrona[i]));
+            }
+
+            for (int i = 0; i < mainFactorValue.length; i++) {
+                String source = "wspGValue" + Integer.toString(i + 1);
+                int id = getResources().getIdentifier(source, "id", getPackageName());
+                mainFactorValue[i] = findViewById(id);
+                mainFactorValue[i].setText(Integer.toString(character.WspolczynnikiGlowne[i]));
+            }
+            for (int i = 0; i < auxiliaryFactorValue.length; i++) {
+                String source = "wspPValue" + Integer.toString(i + 1);
+                int id = getResources().getIdentifier(source, "id", getPackageName());
+                auxiliaryFactorValue[i] = findViewById(id);
+                auxiliaryFactorValue[i].setText(Integer.toString(character.WspolczynnikiPomocnicze[i]));
+            }
+            for(int i=0;i<abilities.length;i++){
+                String source = "abiValue"+ Integer.toString(i);
+                int id = getResources().getIdentifier(source,"id",getPackageName());
+                abilities[i]=findViewById(id);
+                abilities[i].setText(Integer.toString(character.Umiejetnosci[i]));
+            }
+        }
+        }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+
+        outState.putString("name", character.imie);
+        outState.putInt("factorsSum",character.SumaWspolczynnikowGlownych);
+        for(int i=0;i<character.WspolczynnikiGlowne.length;i++)
+            outState.putInt("mainFactors"+Integer.toString(i),character.WspolczynnikiGlowne[i]);
+        for(int i=0;i<character.WspolczynnikiPomocnicze.length;i++)
+            outState.putInt("auxiliaryFactors"+Integer.toString(i),character.WspolczynnikiPomocnicze[i]);
+        for(int i=0;i<character.Umiejetnosci.length;i++)
+            outState.putInt("abi"+Integer.toString(i),character.Umiejetnosci[i]);
+        for(int i=0;i<character.AkcjeRuch.length;i++)
+            outState.putInt("actionMove"+Integer.toString(i),character.AkcjeRuch[i]);
+        for(int i=0;i<character.AkcjeZwarcie.length;i++)
+            outState.putInt("actionCloseCombat"+Integer.toString(i),character.AkcjeZwarcie[i]);
+        for(int i=0;i<character.AkcjeRapierAtak.length;i++)
+            outState.putInt("actionRapierAttack"+Integer.toString(i),character.AkcjeRapierAtak[i]);
+        for(int i=0;i<character.AkcjeRapierObrona.length;i++)
+            outState.putInt("actionRapierDefence"+Integer.toString(i),character.AkcjeRapierObrona[i]);
+        for(int i=0;i<character.AkcjeMieczAtak.length;i++)
+            outState.putInt("actionSwordAttack"+Integer.toString(i),character.AkcjeMieczAtak[i]);
+        for(int i=0;i<character.AkcjeMieczObrona.length;i++)
+            outState.putInt("actionSwordDefence"+Integer.toString(i),character.AkcjeMieczObrona[i]);
+
+
+        super.onSaveInstanceState(outState);
+    }
 
         public void addOne(View view){
         Button buttonClicked = findViewById(view.getId());
