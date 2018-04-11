@@ -288,7 +288,9 @@ public class postac1 extends AppCompatActivity {
         LinearLayout abiLayout = findViewById(R.id.abilitiesLayout);
         LinearLayout rapierLayout = findViewById(R.id.rapierLayout);
         LinearLayout swordLayout = findViewById(R.id.swordLayout);
-        if(rapierLayout.getVisibility()==View.VISIBLE){
+        String tag = view.getTag().toString();
+
+        if(tag=="1"){
             abiLayout.setVisibility(View.GONE);
             rapierLayout.setVisibility(View.GONE);
             swordLayout.setVisibility(View.VISIBLE);
@@ -311,12 +313,12 @@ public class postac1 extends AppCompatActivity {
 
             }
         }
-        else if(swordLayout.getVisibility()==View.VISIBLE){
+        else if(tag=="0"){
             abiLayout.setVisibility(View.VISIBLE);
             rapierLayout.setVisibility(View.GONE);
             swordLayout.setVisibility(View.GONE);
         }
-        else if(abiLayout.getVisibility()==View.VISIBLE){
+        else if(tag=="2"){
             abiLayout.setVisibility(View.GONE);
             rapierLayout.setVisibility(View.VISIBLE);
             swordLayout.setVisibility(View.GONE);
