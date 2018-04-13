@@ -480,5 +480,12 @@ public class postac1 extends AppCompatActivity {
             }
         }
     }
+    public void saveCharacter(View view){
+        String record = character.Zapisz();
+        Intent intent = new Intent();
+        intent.setClass(postac1.this, Menu.class);
+        intent.putExtra("savedCharacter",record);
+        startActivity(intent);
+    }
 }
 

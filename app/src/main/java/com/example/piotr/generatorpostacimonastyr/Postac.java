@@ -131,37 +131,36 @@ public class Postac {
     public String Zapisz() {
 
         String record ="";
-        record+=imie+",";
-        record+=SumaWspolczynnikowGlownych+",";
-        record+=Rany+",";
+        record+=this.imie+",";
+        record+=this.SumaWspolczynnikowGlownych+",";
+        record+=this.Rany+",";
         for(int i=0;i< 8;i++) {
-            record+=WspolczynnikiGlowne[i]+",";
+            record+=this.WspolczynnikiGlowne[i]+",";
         }
         for(int i=0;i<5 ;i++) {
-            record+=WspolczynnikiPomocnicze[i]+",";
+            record+=this.WspolczynnikiPomocnicze[i]+",";
         }
         for(int i=0;i< 22;i++) {
-            record+=Umiejetnosci[i]+",";
+            record+=this.Umiejetnosci[i]+",";
         }
         for(int i=0;i< 4;i++) {
-            record+=AkcjeRuch[i]+",";
+            record+=this.AkcjeRuch[i]+",";
         }
         for(int i=0;i<2 ;i++) {
-            record+=AkcjeZwarcie[i]+",";
+            record+=this.AkcjeZwarcie[i]+",";
         }
         for(int i=0;i< 7;i++) {
-            record+=AkcjeRapierAtak[i]+",";
+            record+=this.AkcjeRapierAtak[i]+",";
         }
         for(int i=0;i< 4;i++) {
-            record+=AkcjeRapierObrona[i]+",";
+            record+=this.AkcjeRapierObrona[i]+",";
         }
         for(int i=0;i<4 ;i++) {
-            record+=AkcjeMieczAtak[i]+",";
+            record+=this.AkcjeMieczAtak[i]+",";
         }
         for(int i=0;i<3 ;i++) {
-            record+=AkcjeMieczObrona[i]+",";
+            record+=this.AkcjeMieczObrona[i]+",";
         }
-        record+=";";
         return record;
     }
 

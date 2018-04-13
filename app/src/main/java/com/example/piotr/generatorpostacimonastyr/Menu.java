@@ -39,27 +39,56 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 
 public class Menu extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
-        final View decorView = getWindow().getDecorView();
-        decorView.setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+
+        Bundle extras = getIntent().getExtras();
+        if(extras!=null)
+        {
+            try {
+                PrintWriter out = new PrintWriter("savedCharacters");
+                out.println(extras.get("savedCharacter").toString());
+                out.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+            try {
+                InputStream is = getAssets().open("savedCharacters");
+                int size = is.available();
+                byte[] buffer = new byte[size];
+                is.read(buffer);
+                is.close();
+                String s = new String(buffer);
+                Toast.makeText(this,s,Toast.LENGTH_SHORT).show();
+
+
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+
+            finish();
+         }
+        else{
+            setContentView(R.layout.activity_menu);
+            final View decorView = getWindow().getDecorView();
+            decorView.setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+        }
+
     }
     public void goToPostac1(View view) {
 
-
+        String loadedChar="";
         String nameF = "";
         try {
             InputStream is = getAssets().open("imK");
@@ -88,6 +117,7 @@ public class Menu extends AppCompatActivity {
         intent.setClass(Menu.this, postac1.class);
         intent.putExtra("m",nameM);
         intent.putExtra("f",nameF);
+        intent.putExtra("loadedChar",loadedChar);
         startActivity(intent);
     }
     public void notReady(View view) {
