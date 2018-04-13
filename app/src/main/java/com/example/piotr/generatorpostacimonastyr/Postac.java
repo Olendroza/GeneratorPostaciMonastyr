@@ -128,7 +128,7 @@ public class Postac {
                 AkcjeZwarcie[los]++;
             }
         }
-    public void Zapisz() {
+    public String Zapisz() {
 
         String record ="";
         record+=imie+",";
@@ -162,6 +162,7 @@ public class Postac {
             record+=AkcjeMieczObrona[i]+",";
         }
         record+=";";
+        return record;
     }
 
     }
