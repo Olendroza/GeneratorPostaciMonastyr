@@ -1,6 +1,8 @@
 package com.example.piotr.generatorpostacimonastyr;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Layout;
@@ -481,11 +483,12 @@ public class postac1 extends AppCompatActivity {
         }
     }
     public void saveCharacter(View view){
-        String record = character.Zapisz();
-        Intent intent = new Intent();
-        intent.setClass(postac1.this, Menu.class);
-        intent.putExtra("savedCharacter",record);
-        startActivity(intent);
+        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        String record = sharedPref.getString("savedCharacters","");
+        record += character.Zapisz();
+        editor.putString("savedCharacters",record);
+        editor.commit();
     }
 }
 

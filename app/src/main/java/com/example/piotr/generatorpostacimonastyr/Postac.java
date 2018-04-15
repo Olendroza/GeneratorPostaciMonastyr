@@ -161,7 +161,42 @@ public class Postac {
         for(int i=0;i<3 ;i++) {
             record+=this.AkcjeMieczObrona[i]+",";
         }
+        record+=";";
         return record;
+    }
+    public void Wczytaj(String klucz){
+            String[] dane = klucz.split(",");
+
+        this.imie=dane[0];
+        this.SumaWspolczynnikowGlownych=Integer.parseInt(dane[1]);
+        this.Rany=Integer.parseInt(dane[2]);
+        for(int i=0;i< 8;i++) {
+            this.WspolczynnikiGlowne[i]=Integer.parseInt(dane[3+i]);
+        }
+        for(int i=0;i<5 ;i++) {
+            this.WspolczynnikiPomocnicze[i]=Integer.parseInt(dane[11+i]);
+        }
+        for(int i=0;i< 22;i++) {
+            this.Umiejetnosci[i]=Integer.parseInt(dane[16+i]);
+        }
+        for(int i=0;i< 4;i++) {
+            this.AkcjeRuch[i]=Integer.parseInt(dane[38+i]);
+        }
+        for(int i=0;i<2 ;i++) {
+            this.AkcjeZwarcie[i]=Integer.parseInt(dane[42+i]);
+        }
+        for(int i=0;i< 7;i++) {
+            this.AkcjeRapierAtak[i]=Integer.parseInt(dane[44+i]);
+        }
+        for(int i=0;i< 4;i++) {
+            this.AkcjeRapierObrona[i]=Integer.parseInt(dane[51+i]);
+        }
+        for(int i=0;i<4 ;i++) {
+            this.AkcjeMieczAtak[i]=Integer.parseInt(dane[55+i]);
+        }
+        for(int i=0;i<3 ;i++) {
+            this.AkcjeMieczObrona[i]=Integer.parseInt(dane[59+i]);
+        }
     }
 
     }

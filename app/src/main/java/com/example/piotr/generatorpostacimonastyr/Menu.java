@@ -36,10 +36,12 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.util.Scanner;
 
 public class Menu extends AppCompatActivity {
 
@@ -50,27 +52,8 @@ public class Menu extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if(extras!=null)
         {
-            try {
-                PrintWriter out = new PrintWriter("savedCharacters");
-                out.println(extras.get("savedCharacter").toString());
-                out.close();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-            try {
-                InputStream is = getAssets().open("savedCharacters");
-                int size = is.available();
-                byte[] buffer = new byte[size];
-                is.read(buffer);
-                is.close();
-                String s = new String(buffer);
-                Toast.makeText(this,s,Toast.LENGTH_SHORT).show();
-
-
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-
+            Context context = getApplicationContext();
+            saveCharacter(context,extras.get("savedCharacter").toString());
             finish();
          }
         else{
@@ -122,5 +105,20 @@ public class Menu extends AppCompatActivity {
     }
     public void notReady(View view) {
         Toast.makeText(this, "Not ready yet", Toast.LENGTH_SHORT).show();
+    }
+    public void saveCharacter(Context context, String sBody){
+        File file = new File(context.getFilesDir(),"savedCharacters");
+        if(!file.exists()){
+            file.mkdir();
+        }
+        try{
+            File gpxfile = new File(file, "savedCharacters");
+            FileWriter writer = new FileWriter(gpxfile);
+            writer.append(sBody);
+            writer.flush();
+            writer.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }
