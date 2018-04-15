@@ -49,14 +49,6 @@ public class Menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Bundle extras = getIntent().getExtras();
-        if(extras!=null)
-        {
-            Context context = getApplicationContext();
-            saveCharacter(context,extras.get("savedCharacter").toString());
-            finish();
-         }
-        else{
             setContentView(R.layout.activity_menu);
             final View decorView = getWindow().getDecorView();
             decorView.setSystemUiVisibility(
@@ -66,8 +58,6 @@ public class Menu extends AppCompatActivity {
                             | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                             | View.SYSTEM_UI_FLAG_FULLSCREEN
                             | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
-        }
-
     }
     public void goToPostac1(View view) {
 
@@ -106,19 +96,7 @@ public class Menu extends AppCompatActivity {
     public void notReady(View view) {
         Toast.makeText(this, "Not ready yet", Toast.LENGTH_SHORT).show();
     }
-    public void saveCharacter(Context context, String sBody){
-        File file = new File(context.getFilesDir(),"savedCharacters");
-        if(!file.exists()){
-            file.mkdir();
-        }
-        try{
-            File gpxfile = new File(file, "savedCharacters");
-            FileWriter writer = new FileWriter(gpxfile);
-            writer.append(sBody);
-            writer.flush();
-            writer.close();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+    public void loadCharacter(View view){
+
     }
 }

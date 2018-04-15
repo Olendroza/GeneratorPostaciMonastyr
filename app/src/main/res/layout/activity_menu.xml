@@ -14,64 +14,71 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="126dp">
 
+
+
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:scaleType="centerCrop"
             android:src="@drawable/backg" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/button1"
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="8dp"
-                android:onClick="goToPostac1"
-
-                android:text="Generuj Postać"
-                android:textColor="#ffffff" />
-
-            <Button
-                android:id="@+id/button2"
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="8dp"
-                android:onClick="notReady"
-
-                android:text="Wczytaj postać"
-                android:textColor="#ffffff" />
-
-            <Button
-                android:id="@+id/buttonExit"
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="24dp"
-                android:onClick="notReady"
-                android:text="Wyjdź"
-                android:textColor="#ffffff" />
-
-        </LinearLayout>
-
-        <TextView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:layout_marginTop="24dp"
-            android:gravity="center"
-            android:text="Monastyr Generator Postaci"
-            android:textColor="#ffffff"
-            android:textSize="26sp" />
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="Monastyr Generator Postaci"
+                android:textColor="#ffffff"
+                android:textSize="26sp" /><!--Title-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/button1"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:onClick="goToPostac1"
+
+                    android:text="Generuj Postać"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/button2"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:onClick="notReady"
+
+                    android:text="Wczytaj postać"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/buttonExit"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:onClick="notReady"
+                    android:text="Wyjdź"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout> <!--standard menu buttons-->
+        </RelativeLayout>
+
+
     </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>
