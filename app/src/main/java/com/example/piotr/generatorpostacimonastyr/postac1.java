@@ -583,6 +583,9 @@ public class postac1 extends AppCompatActivity {
         }
         editor.putString("savedCharacters",record);
         editor.commit();
+
+        Toast.makeText(this, "Postać "+ character.imie+" zapisana", Toast.LENGTH_SHORT).show();
+
     }
 }
 
