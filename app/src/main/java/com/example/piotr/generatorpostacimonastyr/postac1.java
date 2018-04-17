@@ -44,9 +44,13 @@ public class postac1 extends AppCompatActivity {
 
         TextView name= findViewById(R.id.imie);
         Bundle extras = getIntent().getExtras();
+        String temp = extras.getString("loadedChar");
+        Toast.makeText(this, temp, Toast.LENGTH_SHORT).show();
 
-        if(extras.getString("loadedChar")!=""){
-            character.Wczytaj(extras.getString("loadedChar"));
+        if(savedInstanceState==null && temp.equals("")){
+            String malenames = extras.getString("m");
+            String femalenames = extras.getString("f");
+            character = new Postac(malenames,femalenames);
 
             name.setText(character.imie);
 
@@ -120,10 +124,8 @@ public class postac1 extends AppCompatActivity {
                 abilities[i].setText(Integer.toString(character.Umiejetnosci[i]));
             }
         }
-        else if(savedInstanceState==null){
-            String malenames = extras.getString("m");
-            String femalenames = extras.getString("f");
-            character = new Postac(malenames,femalenames);
+        else if(extras.getString("loadedChar")!=""){
+            character.Wczytaj(extras.getString("loadedChar"));
 
             name.setText(character.imie);
 
@@ -563,7 +565,23 @@ public class postac1 extends AppCompatActivity {
         SharedPreferences sharedPref = getSharedPreferences("saves", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         String record = sharedPref.getString("savedCharacters","");
-        record += character.Zapisz();
+        String[] savedChars = record.split(";");
+        boolean saveExsist=false;
+        for(int i=0; i<savedChars.length;i++){
+            String[] savedCharParams = savedChars[i].split(",");
+            if(savedCharParams[0]==character.imie)
+            {
+                savedChars[i]=character.Zapisz();
+                saveExsist = true;
+            }
+        }
+        if(!saveExsist)
+            record += character.Zapisz();
+        else{
+            record="";
+            for(int i=0;i<savedChars.length;i++)
+                record+=savedChars[i]+";";
+        }
         editor.putString("savedCharacters",record);
         editor.commit();
     }
