@@ -57,8 +57,13 @@ public class Menu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_menu);
+
+        LinearLayout linearLayout = findViewById(R.id.loadLayout);
+        LinearLayout menuLayout = findViewById(R.id.menuButtonsLayout);
+        menuLayout.setVisibility(View.VISIBLE);
+        linearLayout.setVisibility(View.GONE);
+
         final View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE
@@ -115,6 +120,9 @@ public class Menu extends AppCompatActivity {
         final String[] characterData = record.split(";");
 
         LinearLayout linearLayout = findViewById(R.id.loadLayout);
+        LinearLayout menuLayout = findViewById(R.id.menuButtonsLayout);
+        menuLayout.setVisibility(View.GONE);
+
         RelativeLayout[] recordLayout = new RelativeLayout[characterData.length];
         Button[] deleteButton = new Button[characterData.length];
         Button[] loadButton = new Button[characterData.length];
@@ -137,12 +145,35 @@ public class Menu extends AppCompatActivity {
             names[i] = new TextView(this);
             names[i].setLayoutParams(namesParams);
             String[] name = characterData[i].split(",");
-            names[i].setText(name[0]);
+            names[i].setText(" "+name[0]+" ");
             names[i].setTextColor(Color.parseColor("#FFFFFF"));
+
 
             deleteButton[i]=new Button(this);
             deleteButton[i].setLayoutParams(deleteButtonParams);
             deleteButton[i].setText("Usuń");
+            deleteButton[i].setId(i+1000);
+
+            deleteButton[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    SharedPreferences sharedPref = getSharedPreferences("saves", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPref.edit();
+                    String record = sharedPref.getString("savedCharacters","");
+                    String[] savedChars = record.split(";");
+                    int number = view.getId();
+                    number-=1000;
+                    record="";
+                        for(int i=0;i<savedChars.length;i++){
+                            if(i!=number)
+                            record+=savedChars[i]+";";
+                        }
+                    editor.putString("savedCharacters",record);
+                    editor.commit();
+                    loadCharacter(view.getRootView());
+                }
+            });
+
             loadButton[i]= new Button(this);
             loadButton[i].setLayoutParams(loadButtonParams);
             loadButton[i].setText("Wczytaj");
@@ -158,13 +189,22 @@ public class Menu extends AppCompatActivity {
                     goToPostac1(view);
                 }
             });
-
             recordLayout[i].addView(names[i]);
             recordLayout[i].addView(deleteButton[i]);
             recordLayout[i].addView(loadButton[i]);
-            linearLayout.addView(recordLayout[i]);
+            if(name[0]!="")
+            {
+                linearLayout.addView(recordLayout[i]);
+            }
         }
 
 
+    }
+
+    public void backToMenu(View view){
+        LinearLayout linearLayout = findViewById(R.id.loadLayout);
+        LinearLayout menuLayout = findViewById(R.id.menuButtonsLayout);
+        menuLayout.setVisibility(View.VISIBLE);
+        linearLayout.setVisibility(View.GONE);
     }
 }

@@ -45,7 +45,6 @@ public class postac1 extends AppCompatActivity {
         TextView name= findViewById(R.id.imie);
         Bundle extras = getIntent().getExtras();
         String temp = extras.getString("loadedChar");
-        Toast.makeText(this, temp, Toast.LENGTH_SHORT).show();
 
         if(savedInstanceState==null && temp.equals("")){
             String malenames = extras.getString("m");
@@ -569,7 +568,7 @@ public class postac1 extends AppCompatActivity {
         boolean saveExsist=false;
         for(int i=0; i<savedChars.length;i++){
             String[] savedCharParams = savedChars[i].split(",");
-            if(savedCharParams[0]==character.imie)
+            if(savedCharParams[0].equals(character.imie))
             {
                 savedChars[i]=character.Zapisz();
                 saveExsist = true;
