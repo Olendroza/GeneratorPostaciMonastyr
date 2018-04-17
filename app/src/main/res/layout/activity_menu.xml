@@ -26,16 +26,19 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/title"
                 android:layout_alignParentTop="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
                 android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
                 android:gravity="center"
                 android:text="Monastyr Generator Postaci"
                 android:textColor="#ffffff"
                 android:textSize="26sp" /><!--Title-->
             <LinearLayout
+                android:id="@+id/menuButtonsLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -59,7 +62,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_margin="8dp"
-                    android:onClick="notReady"
+                    android:onClick="loadCharacter"
 
                     android:text="Wczytaj postać"
                     android:textColor="#ffffff" />
@@ -76,6 +79,16 @@
                     android:textColor="#ffffff" />
 
             </LinearLayout> <!--standard menu buttons-->
+            <LinearLayout
+                android:id="@+id/loadLayout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title">
+
+
+
+            </LinearLayout>
         </RelativeLayout>
 
 
