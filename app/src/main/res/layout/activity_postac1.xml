@@ -198,13 +198,15 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1">
+
                                 <Button
                                     android:id="@+id/ranyValue"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="0"
                                     android:layout_alignParentEnd="true"
-                                    android:layout_alignParentTop="true"/>
+                                    android:layout_alignParentTop="true"
+                                    android:onClick="hurt"
+                                    android:text="0" />
                                 <LinearLayout
                                     android:orientation="vertical"
                                     android:layout_width="match_parent"
@@ -269,8 +271,8 @@
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentEnd="true"
                                     android:layout_alignParentTop="true"
-                                    android:text="Rany  "
-                                    />
+                                    android:onClick="hurt"
+                                    android:text="Rany  " />
 
 
 
@@ -1400,12 +1402,18 @@
                     android:layout_height="wrap_content"
                     android:background="#ffffff"
                     android:layout_alignParentBottom="true">
-
+                    <Button
+                        android:id="@+id/back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wróć"
+                        android:layout_alignParentStart="true"
+                        android:onClick="back"/>
                     <Button
                         android:id="@+id/ChangeViewAbi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
+                        android:layout_toRightOf="@id/back"
                         android:tag="0"
                         android:onClick="changeViev"
                         android:text="Umi" />

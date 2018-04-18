@@ -115,6 +115,10 @@ public class Menu extends AppCompatActivity {
 
     public void loadCharacter(View view) {
         setContentView(R.layout.activity_menu);
+
+        Button backButton = findViewById(R.id.backButton);
+        backButton.setText("Wróć");
+
         SharedPreferences sharedPref = getSharedPreferences("saves",MODE_PRIVATE);
         String record = sharedPref.getString("savedCharacters", "dupa");
         final String[] characterData = record.split(";");
@@ -202,9 +206,17 @@ public class Menu extends AppCompatActivity {
     }
 
     public void backToMenu(View view){
+        Button backButton = findViewById(R.id.backButton);
         LinearLayout linearLayout = findViewById(R.id.loadLayout);
         LinearLayout menuLayout = findViewById(R.id.menuButtonsLayout);
-        menuLayout.setVisibility(View.VISIBLE);
-        linearLayout.setVisibility(View.GONE);
+        backButton.setText("Wyjdź");
+        if(menuLayout.getVisibility()==View.VISIBLE)
+        {
+            finishAndRemoveTask();
+        }
+        else{
+            menuLayout.setVisibility(View.VISIBLE);
+            linearLayout.setVisibility(View.GONE);
+        }
     }
 }

@@ -128,6 +128,25 @@ public class Postac {
                 AkcjeZwarcie[los]++;
             }
         }
+        
+    public void zran(int rana){
+            Rany+=rana;
+            for(int i =0;i<WspolczynnikiGlowne.length;i++){
+                WspolczynnikiGlowne[i]+=rana;
+            }
+            for(int i=0;i<WspolczynnikiPomocnicze.length;i++)
+                WspolczynnikiPomocnicze[i]+=rana;
+            for(int i=0;i<AkcjeRuch.length;i++)
+                AkcjeRuch[i]+=rana;
+            for(int i=0;i<AkcjeRapierAtak.length;i++)
+                AkcjeRapierAtak[i]+=rana;
+            for(int i=0;i<AkcjeMieczObrona.length;i++)
+                AkcjeRapierObrona[i]+=rana;
+            for(int i=0;i<AkcjeMieczAtak.length;i++)
+                AkcjeRapierAtak[i]+=rana;
+            for(int i =0;i<AkcjeZwarcie.length;i++)
+                AkcjeZwarcie[i]+=rana;
+        }
     public String Zapisz() {
 
         String record ="";

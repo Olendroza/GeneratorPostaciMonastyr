@@ -38,14 +38,7 @@
                 android:text="Monastyr Generator Postaci"
                 android:textColor="#ffffff"
                 android:textSize="26sp" /><!--Title-->
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_marginBottom="24dp"
-                android:layout_marginTop="24dp"
-                android:onClick="backToMenu"
-                android:text="Wróć" />
+
             <LinearLayout
                 android:id="@+id/menuButtonsLayout"
                 android:layout_width="wrap_content"
@@ -75,19 +68,12 @@
 
                     android:text="Wczytaj postać"
                     android:textColor="#ffffff" />
-
-                <Button
-                    android:id="@+id/buttonExit"
-                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="24dp"
-                    android:onClick="notReady"
-                    android:text="Wyjdź"
-                    android:textColor="#ffffff" />
-
             </LinearLayout> <!--standard menu buttons-->
+            <ScrollView
+                android:layout_below="@id/title"
+                android:layout_above="@id/bottomMenuBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
             <LinearLayout
                 android:id="@+id/loadLayout"
                 android:orientation="vertical"
@@ -98,6 +84,24 @@
 
 
             </LinearLayout>
+            </ScrollView><!--load -->
+            <RelativeLayout
+                android:id="@+id/bottomMenuBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <Button
+                    android:id="@+id/backButton"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:onClick="backToMenu"
+                    android:textColor="#ffffff"
+                    android:text="Wyjdź"/>
+            </RelativeLayout>
+
         </RelativeLayout>
 
 
