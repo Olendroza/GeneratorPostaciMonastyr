@@ -56,7 +56,7 @@ public class Menu extends AppCompatActivity {
 
     String characterToLoad = "";
     @Override
-    protected void onCreate(Bundle savedInstanceState) k{
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
