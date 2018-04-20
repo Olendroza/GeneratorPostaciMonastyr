@@ -13,10 +13,14 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class postac1 extends AppCompatActivity {
 
     Postac character = new Postac("noname", "noname");
-    Boolean created = false;
+    List quickLoad = new ArrayList();
+    int quickLoadNumber = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -198,27 +202,7 @@ public class postac1 extends AppCompatActivity {
                 abilities[i].setText(Integer.toString(character.Umiejetnosci[i]));
             }
         } else {
-            character.imie = savedInstanceState.getString("name");
-
-            character.SumaWspolczynnikowGlownych = savedInstanceState.getInt("factorsSum");
-            for (int i = 0; i < character.WspolczynnikiGlowne.length; i++)
-                character.WspolczynnikiGlowne[i] = savedInstanceState.getInt("mainFactors" + Integer.toString(i));
-            for (int i = 0; i < character.WspolczynnikiPomocnicze.length; i++)
-                character.WspolczynnikiPomocnicze[i] = savedInstanceState.getInt("auxiliaryFactors" + Integer.toString(i));
-            for (int i = 0; i < character.Umiejetnosci.length; i++)
-                character.Umiejetnosci[i] = savedInstanceState.getInt("abi" + Integer.toString(i));
-            for (int i = 0; i < character.AkcjeRuch.length; i++)
-                character.AkcjeRuch[i] = savedInstanceState.getInt("actionMove" + Integer.toString(i));
-            for (int i = 0; i < character.AkcjeZwarcie.length; i++)
-                character.AkcjeZwarcie[i] = savedInstanceState.getInt("actionCloseCombat" + Integer.toString(i));
-            for (int i = 0; i < character.AkcjeRapierAtak.length; i++)
-                character.AkcjeRapierAtak[i] = savedInstanceState.getInt("actionRapierAttack" + Integer.toString(i));
-            for (int i = 0; i < character.AkcjeRapierObrona.length; i++)
-                character.AkcjeRapierObrona[i] = savedInstanceState.getInt("actionRapierDefence" + Integer.toString(i));
-            for (int i = 0; i < character.AkcjeMieczAtak.length; i++)
-                character.AkcjeMieczAtak[i] = savedInstanceState.getInt("actionSwordAttack" + Integer.toString(i));
-            for (int i = 0; i < character.AkcjeMieczObrona.length; i++)
-                character.AkcjeMieczObrona[i] = savedInstanceState.getInt("actionSwordDefence" + Integer.toString(i));
+            character.Wczytaj(savedInstanceState.getString("save"));
 
             name.setText(character.imie);
             closeC[0] = findViewById(R.id.cCombatAValue);
@@ -290,6 +274,7 @@ public class postac1 extends AppCompatActivity {
                 abilities[i] = findViewById(id);
                 abilities[i].setText(Integer.toString(character.Umiejetnosci[i]));
             }
+
         }
     }
 
@@ -297,28 +282,7 @@ public class postac1 extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle outState) {
 
-        outState.putString("name", character.imie);
-        outState.putInt("factorsSum", character.SumaWspolczynnikowGlownych);
-        for (int i = 0; i < character.WspolczynnikiGlowne.length; i++)
-            outState.putInt("mainFactors" + Integer.toString(i), character.WspolczynnikiGlowne[i]);
-        for (int i = 0; i < character.WspolczynnikiPomocnicze.length; i++)
-            outState.putInt("auxiliaryFactors" + Integer.toString(i), character.WspolczynnikiPomocnicze[i]);
-        for (int i = 0; i < character.Umiejetnosci.length; i++)
-            outState.putInt("abi" + Integer.toString(i), character.Umiejetnosci[i]);
-        for (int i = 0; i < character.AkcjeRuch.length; i++)
-            outState.putInt("actionMove" + Integer.toString(i), character.AkcjeRuch[i]);
-        for (int i = 0; i < character.AkcjeZwarcie.length; i++)
-            outState.putInt("actionCloseCombat" + Integer.toString(i), character.AkcjeZwarcie[i]);
-        for (int i = 0; i < character.AkcjeRapierAtak.length; i++)
-            outState.putInt("actionRapierAttack" + Integer.toString(i), character.AkcjeRapierAtak[i]);
-        for (int i = 0; i < character.AkcjeRapierObrona.length; i++)
-            outState.putInt("actionRapierDefence" + Integer.toString(i), character.AkcjeRapierObrona[i]);
-        for (int i = 0; i < character.AkcjeMieczAtak.length; i++)
-            outState.putInt("actionSwordAttack" + Integer.toString(i), character.AkcjeMieczAtak[i]);
-        for (int i = 0; i < character.AkcjeMieczObrona.length; i++)
-            outState.putInt("actionSwordDefence" + Integer.toString(i), character.AkcjeMieczObrona[i]);
-
-
+        outState.putString("save",character.Zapisz());
         super.onSaveInstanceState(outState);
     }
 
