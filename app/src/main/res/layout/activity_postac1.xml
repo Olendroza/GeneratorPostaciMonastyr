@@ -1442,12 +1442,23 @@
                         android:text="QL zapisz"
                         android:onClick="saveToQuickLoad"/>
                     <Button
-                        android:id="@+id/QLload"
+                        android:id="@+id/QLdelete"
                         android:layout_toRightOf="@id/QLsave"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="QL wczytaj"
-                        android:onClick="QuickLoad"/>
+                        android:text="QL usuń"/>
+                    <Button
+                        android:id="@+id/QLleft"
+                        android:layout_toRightOf="@id/QLdelete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="lewo"/>
+                    <Button
+                        android:id="@+id/QLright"
+                        android:layout_toRightOf="@id/QLleft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="prawo"/>
 
                     <Button
                         android:id="@+id/saveButton"
