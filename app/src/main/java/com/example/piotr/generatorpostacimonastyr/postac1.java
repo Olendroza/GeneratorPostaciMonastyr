@@ -158,14 +158,17 @@ public class postac1 extends AppCompatActivity {
         quickLoadList.add(character.Zapisz());
     }
 
-    public void QuickLoad(View view){
-        Intent intent = new Intent();
-        intent.setClass(postac1.this, postac1.class);
-        intent.putExtra("m", "");
-        intent.putExtra("f", "");
-        intent.putExtra("loadedChar", character.Zapisz());
-
-        startActivity(intent);
+    public void QLleft(View view){
+        if(quickLoadNumber!=0)
+            quickLoadNumber--;
+        character.Wczytaj((String)quickLoadList.get(quickLoadNumber));
+        characterInitiator(view);
+    }
+    public void QLRight(View view){
+        if(quickLoadNumber!=quickLoadList.size()-1)
+            quickLoadNumber++;
+        character.Wczytaj((String)quickLoadList.get(quickLoadNumber));
+        characterInitiator(view);
     }
 
     public void addOne(View view) {

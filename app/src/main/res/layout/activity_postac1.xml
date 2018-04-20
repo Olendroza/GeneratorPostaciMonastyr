@@ -1452,30 +1452,24 @@
                         android:layout_toRightOf="@id/QLdelete"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="lewo"/>
+                        android:text="lewo"
+                        android:onClick="QLleft"/>
                     <Button
                         android:id="@+id/QLright"
                         android:layout_toRightOf="@id/QLleft"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="prawo"/>
+                        android:text="prawo"
+                        android:onClick="QLRight"/>
 
                     <Button
                         android:id="@+id/saveButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toLeftOf="@id/ChangeCharacter"
-                        android:onClick="saveToQuickLoad"
+                        android:layout_toRightOf="@id/QLright"
+                        android:onClick="saveCharacter"
                         android:tag="2"
                         android:text="Zapisz" />
-
-                    <Button
-                        android:id="@+id/ChangeCharacter"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:onClick="QuickLoad"
-                        android:text="Postać" />
                 </RelativeLayout>
 
             </RelativeLayout> <!--stores scroll view and bottom menu bar-->
