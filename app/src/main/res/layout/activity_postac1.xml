@@ -20,6 +20,7 @@
             android:scaleType="centerCrop"
             android:src="@drawable/backg" /><!--background image-->
             <RelativeLayout
+                android:id="@+id/characterLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -1399,6 +1400,7 @@
                     </LinearLayout>
                 </ScrollView><!-- frame that allow to scroll if view is to big to fit on a screen-->
                 <RelativeLayout
+                    android:id="@+id/bottomMenuBar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#ffffff"
@@ -1461,15 +1463,29 @@
                         android:layout_height="wrap_content"
                         android:text="prawo"
                         android:onClick="QLRight"/>
+                    <Button
+                        android:id="@+id/QLmenu"
+                        android:layout_toRightOf="@id/QLright"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="menu"
+                        android:onClick="QLSavesMenu"/>
 
                     <Button
                         android:id="@+id/saveButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toRightOf="@id/QLright"
+                        android:layout_alignParentEnd="true"
                         android:onClick="saveCharacter"
                         android:tag="2"
                         android:text="Zapisz" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:onClick="generate"
+                        android:tag="2"
+                        android:text="generuj" />
                 </RelativeLayout>
 
             </RelativeLayout> <!--stores scroll view and bottom menu bar-->
