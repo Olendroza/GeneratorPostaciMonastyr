@@ -45,7 +45,6 @@ public class postac1 extends AppCompatActivity {
             String malenames = extras.getString("m");
             String femalenames = extras.getString("f");
             character = new Postac(malenames, femalenames);
-
             characterInitiator(decorView);
         } else if ((savedInstanceState == null && !temp.equals(""))) {
             character.Wczytaj(extras.getString("loadedChar"));
@@ -62,7 +61,6 @@ public class postac1 extends AppCompatActivity {
 
         outState.putString("save",character.Zapisz());
         super.onSaveInstanceState(outState);
-
     }
 
     public void characterInitiator(View view) {
@@ -159,7 +157,6 @@ public class postac1 extends AppCompatActivity {
         quickLoadNumber++;
         quickLoadList.add(character.Zapisz());
     }
-
 
     public void QuickLoad(View view){
         Intent intent = new Intent();
