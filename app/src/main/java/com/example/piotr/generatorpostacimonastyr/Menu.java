@@ -31,6 +31,7 @@ import android.text.Layout;
 import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -55,14 +56,18 @@ public class Menu extends AppCompatActivity {
 
     String characterToLoad = "";
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) k{
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_menu);
 
         LinearLayout linearLayout = findViewById(R.id.loadLayout);
         LinearLayout menuLayout = findViewById(R.id.menuButtonsLayout);
         menuLayout.setVisibility(View.VISIBLE);
         linearLayout.setVisibility(View.GONE);
+
+
 
         final View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(

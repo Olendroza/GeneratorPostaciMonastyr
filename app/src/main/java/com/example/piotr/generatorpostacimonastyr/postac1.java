@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Layout;
 import android.view.View;
+import android.view.ViewTreeObserver;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -19,12 +21,14 @@ import java.util.List;
 public class postac1 extends AppCompatActivity {
 
     Postac character = new Postac("noname", "noname");
-    List quickLoad = new ArrayList();
+    List quickLoadList = new ArrayList();
     int quickLoadNumber = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_postac1);
         final View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(
@@ -286,6 +290,20 @@ public class postac1 extends AppCompatActivity {
         super.onSaveInstanceState(outState);
     }
 
+    public void saveToQuickLoad(View view){
+        quickLoadNumber++;
+        quickLoadList.add(character.Zapisz());
+    }
+    public void QuickLoad(View view){
+        Intent intent = new Intent();
+        intent.setClass(postac1.this, postac1.class);
+        intent.putExtra("m", "");
+        intent.putExtra("f", "");
+        intent.putExtra("loadedChar", character.Zapisz());
+
+        startActivity(intent);
+    }
+
     public void addOne(View view) {
         Button buttonClicked = findViewById(view.getId());
         String id = view.getResources().getResourceName(view.getId());
@@ -525,7 +543,9 @@ public class postac1 extends AppCompatActivity {
     }
 
     public void back(View view) {
-        super.onBackPressed();
+        Intent intent = new Intent();
+        intent.setClass(postac1.this, Menu.class);
+        startActivity(intent);
     }
 
     public void hurt(View view) {

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@android:style/Theme.NoTitleBar"
     tools:context="com.example.piotr.generatorpostacimonastyr.postac1">
 
 
@@ -136,8 +137,8 @@
 
                                 <Button
                                     android:id="@+id/wspGValue1"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="48dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:maxLines="1"
                                     android:onClick="addOne"
                                     android:text="0" />
@@ -1439,15 +1440,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_toLeftOf="@id/ChangeCharacter"
-                        android:onClick="saveCharacter"
+                        android:onClick="saveToQuickLoad"
                         android:tag="2"
                         android:text="Zapisz" />
+
                     <Button
                         android:id="@+id/ChangeCharacter"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
-                        android:onClick="changeViev"
+                        android:onClick="QuickLoad"
                         android:text="Postać" />
                 </RelativeLayout>
 
