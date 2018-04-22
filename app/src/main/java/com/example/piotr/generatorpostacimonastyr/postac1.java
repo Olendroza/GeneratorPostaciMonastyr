@@ -4,31 +4,27 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Layout;
+import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.PopupMenu;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class postac1 extends AppCompatActivity {
+public class postac1 extends AppCompatActivity{
 
     Postac character = new Postac("noname", "noname");
     List quickLoadList = new ArrayList();
     int quickLoadNumber = -1;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +40,7 @@ public class postac1 extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_FULLSCREEN
                         | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
-
+        Context context = getBaseContext();
         Bundle extras = getIntent().getExtras();
         String temp = extras.getString("loadedChar");
         if (savedInstanceState == null && temp.equals("")) {
@@ -59,6 +55,28 @@ public class postac1 extends AppCompatActivity {
             character.Wczytaj(savedInstanceState.getString("save"));
             characterInitiator(decorView);
         }
+
+        //initiate char
+        View qlMenuButton = findViewById(R.id.QLmenu);
+       qlMenuButton.setOnLongClickListener(new View.OnLongClickListener() {
+           @Override
+           public boolean onLongClick(View view) {
+               QLSavesMenu(view);
+               return false;
+           }
+       });
+       //QL menu listner
+        View vievMenuButton = findViewById(R.id.viewButton);
+        vievMenuButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                Button thisButton = (Button) findViewById(R.id.viewButton);
+                thisButton.setTag("1");
+                changeViewMenu(view);
+                return false;
+            }
+        });
+        //change view menu listner
     }
 
 
@@ -68,9 +86,6 @@ public class postac1 extends AppCompatActivity {
         outState.putString("save",character.Zapisz());
         super.onSaveInstanceState(outState);
     }
-
-
-
     public void characterInitiator(View view) {
         Button[] mainFactorValue = new Button[8];
         Button[] auxiliaryFactorValue = new Button[6];
@@ -226,6 +241,8 @@ public class postac1 extends AppCompatActivity {
 
             int savesLayoutid = 11001;
             final Button exitButton = new Button(this);
+            int exitButtonid1 = 11002;
+            exitButton.setId(exitButtonid1);
             RelativeLayout.LayoutParams exitParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
             exitParams.addRule(RelativeLayout.ABOVE, savesLayoutid);
             exitButton.setLayoutParams(exitParams);
@@ -233,6 +250,8 @@ public class postac1 extends AppCompatActivity {
 
 
             final Button exitButton1 = new Button(this);
+            int exitButtonid2 = 11003;
+            exitButton1.setId(exitButtonid2);
             RelativeLayout.LayoutParams exitParams1 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
             exitParams1.addRule(RelativeLayout.ABOVE, R.id.bottomMenuBar);
             exitParams1.addRule(RelativeLayout.RIGHT_OF, savesLayoutid);
@@ -241,6 +260,8 @@ public class postac1 extends AppCompatActivity {
 
 
             final Button exitButton2 = new Button(this);
+            int exitButtonid3 = 11004;
+            exitButton2.setId(exitButtonid3);
             RelativeLayout.LayoutParams exitParams2 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
             exitParams2.addRule(RelativeLayout.ABOVE, R.id.bottomMenuBar);
             exitParams2.addRule(RelativeLayout.LEFT_OF, savesLayoutid);
@@ -275,7 +296,15 @@ public class postac1 extends AppCompatActivity {
                         characterLayout.removeView(exitButton);
                         characterLayout.removeView(exitButton1);
                         characterLayout.removeView(exitButton2);
+                        int viewLayout =22001;
+                        int exitButton1 = 22002;
+                        int exitButton2 = 22003;
+                        int exitButton3 = 22004;
 
+                        characterLayout.removeView(findViewById(viewLayout));
+                        characterLayout.removeView(findViewById(exitButton1));
+                        characterLayout.removeView(findViewById(exitButton2));
+                        characterLayout.removeView(findViewById(exitButton3));
 
                         characterInitiator(view.getRootView());
 
@@ -300,6 +329,15 @@ public class postac1 extends AppCompatActivity {
                         characterLayout.removeView(exitButton2);
                         Button menuButton = (Button) findViewById(R.id.QLmenu);
                         menuButton.setEnabled(true);
+                        int viewLayout =22001;
+                        int exitButton1 = 22002;
+                        int exitButton2 = 22003;
+                        int exitButton3 = 22004;
+
+                        characterLayout.removeView(findViewById(viewLayout));
+                        characterLayout.removeView(findViewById(exitButton1));
+                        characterLayout.removeView(findViewById(exitButton2));
+                        characterLayout.removeView(findViewById(exitButton3));
                         QLSavesMenu(view.getRootView());
                     }
                 });
@@ -325,6 +363,15 @@ public class postac1 extends AppCompatActivity {
                     characterLayout.removeView(exitButton);
                     characterLayout.removeView(exitButton1);
                     characterLayout.removeView(exitButton2);
+                    int viewLayout =22001;
+                    int exitButton1 = 22002;
+                    int exitButton2 = 22003;
+                    int exitButton3 = 22004;
+
+                    characterLayout.removeView(findViewById(viewLayout));
+                    characterLayout.removeView(findViewById(exitButton1));
+                    characterLayout.removeView(findViewById(exitButton2));
+                    characterLayout.removeView(findViewById(exitButton3));
                     Button menuButton = (Button) findViewById(R.id.QLmenu);
                     menuButton.setEnabled(true);
 
@@ -338,6 +385,15 @@ public class postac1 extends AppCompatActivity {
                     characterLayout.removeView(exitButton);
                     characterLayout.removeView(exitButton1);
                     characterLayout.removeView(exitButton2);
+                    int viewLayout =22001;
+                    int exitButton1 = 22002;
+                    int exitButton2 = 22003;
+                    int exitButton3 = 22004;
+
+                    characterLayout.removeView(findViewById(viewLayout));
+                    characterLayout.removeView(findViewById(exitButton1));
+                    characterLayout.removeView(findViewById(exitButton2));
+                    characterLayout.removeView(findViewById(exitButton3));
                     Button menuButton = (Button) findViewById(R.id.QLmenu);
                     menuButton.setEnabled(true);
                 }
@@ -350,10 +406,30 @@ public class postac1 extends AppCompatActivity {
                     characterLayout.removeView(exitButton);
                     characterLayout.removeView(exitButton1);
                     characterLayout.removeView(exitButton2);
+                    int viewLayout =22001;
+                    int exitButton1 = 22002;
+                    int exitButton2 = 22003;
+                    int exitButton3 = 22004;
+
+                    characterLayout.removeView(findViewById(viewLayout));
+                    characterLayout.removeView(findViewById(exitButton1));
+                    characterLayout.removeView(findViewById(exitButton2));
+                    characterLayout.removeView(findViewById(exitButton3));
                     Button menuButton = (Button) findViewById(R.id.QLmenu);
                     menuButton.setEnabled(true);
                 }
             });
+
+            int viewLayout =22001;
+             exitButtonid1 = 22002;
+             exitButtonid2 = 22003;
+             exitButtonid3 = 22004;
+
+            characterLayout.removeView(findViewById(viewLayout));
+            characterLayout.removeView(findViewById(exitButtonid1));
+            characterLayout.removeView(findViewById(exitButtonid2));
+            characterLayout.removeView(findViewById(exitButtonid3));
+
         }
         else
             Toast.makeText(this, "Nie ma zapisanych postaci", Toast.LENGTH_SHORT).show();
@@ -520,61 +596,319 @@ public class postac1 extends AppCompatActivity {
 
 
     }
-    public void changeViev(View view) {
+
+    public void changeViev(int numberOfView,boolean menuOn) {
         LinearLayout abiLayout = findViewById(R.id.abilitiesLayout);
         LinearLayout rapierLayout = findViewById(R.id.rapierLayout);
         LinearLayout swordLayout = findViewById(R.id.swordLayout);
-        Button buttonClicked = findViewById(view.getId());
-        String idd = view.getResources().getResourceName(view.getId());
 
-        if (idd.contains("Sword")) {
-            abiLayout.setVisibility(View.GONE);
-            rapierLayout.setVisibility(View.GONE);
-            swordLayout.setVisibility(View.VISIBLE);
-
-            Button[] Smotion = new Button[4]; // motion buttons in sword layout
-            Button[] ScloseC = new Button[2];
-
-            ScloseC[0] = findViewById(R.id.ScCombatAValue);
-            ScloseC[0].setText(Integer.toString(character.AkcjeZwarcie[0]));
-            ScloseC[1] = findViewById(R.id.ScCombatDValue);
-            ScloseC[1].setText(Integer.toString(character.AkcjeZwarcie[1]));
-
-            Smotion[0] = findViewById(R.id.SmotionAValue);
-            Smotion[0].setText(Integer.toString(character.AkcjeRuch[0]));
-            for (int i = 1; i < Smotion.length; i++) {
-                String source2 = "SmotionD" + Integer.toString(i - 1) + "Value";
-                int id2 = getResources().getIdentifier(source2, "id", getPackageName());
-                Smotion[i] = findViewById(id2);
-                Smotion[i].setText(Integer.toString(character.AkcjeRuch[i]));
-
+        if(menuOn==false){
+            if(abiLayout.getVisibility()==LinearLayout.VISIBLE){
+                abiLayout.setVisibility(LinearLayout.GONE);
+                rapierLayout.setVisibility(LinearLayout.VISIBLE);
+                swordLayout.setVisibility(LinearLayout.GONE);
             }
-        } else if (idd.contains("Abi")) {
-            abiLayout.setVisibility(View.VISIBLE);
-            rapierLayout.setVisibility(View.GONE);
-            swordLayout.setVisibility(View.GONE);
-        } else if (idd.contains("Rapier")) {
-            abiLayout.setVisibility(View.GONE);
-            rapierLayout.setVisibility(View.VISIBLE);
-            swordLayout.setVisibility(View.GONE);
-
-            Button[] motion = new Button[4];
-            Button[] closeC = new Button[2];
-
-            closeC[0] = findViewById(R.id.cCombatAValue);
-            closeC[0].setText(Integer.toString(character.AkcjeZwarcie[0]));
-            closeC[1] = findViewById(R.id.cCombatDValue);
-            closeC[1].setText(Integer.toString(character.AkcjeZwarcie[1]));
-
-            motion[0] = findViewById(R.id.SmotionAValue);
-            motion[0].setText(Integer.toString(character.AkcjeRuch[0]));
-            for (int i = 1; i < motion.length; i++) {
-                String source = "motionD" + Integer.toString(i - 1) + "Value";
-                int id = getResources().getIdentifier(source, "id", getPackageName());
-                motion[i] = findViewById(id);
-                motion[i].setText(Integer.toString(character.AkcjeRuch[i]));
+            else if(rapierLayout.getVisibility()==LinearLayout.VISIBLE){
+                abiLayout.setVisibility(LinearLayout.GONE);
+                rapierLayout.setVisibility(LinearLayout.GONE);
+                swordLayout.setVisibility(LinearLayout.VISIBLE);
+            }
+            else{
+                abiLayout.setVisibility(LinearLayout.VISIBLE);
+                rapierLayout.setVisibility(LinearLayout.GONE);
+                swordLayout.setVisibility(LinearLayout.GONE);
             }
         }
+        else {
+
+            if (numberOfView == 1) {
+                abiLayout.setVisibility(View.GONE);
+                rapierLayout.setVisibility(View.GONE);
+                swordLayout.setVisibility(View.VISIBLE);
+
+                Button[] Smotion = new Button[4]; // motion buttons in sword layout
+                Button[] ScloseC = new Button[2];
+
+                ScloseC[0] = findViewById(R.id.ScCombatAValue);
+                ScloseC[0].setText(Integer.toString(character.AkcjeZwarcie[0]));
+                ScloseC[1] = findViewById(R.id.ScCombatDValue);
+                ScloseC[1].setText(Integer.toString(character.AkcjeZwarcie[1]));
+
+                Smotion[0] = findViewById(R.id.SmotionAValue);
+                Smotion[0].setText(Integer.toString(character.AkcjeRuch[0]));
+                for (int i = 1; i < Smotion.length; i++) {
+                    String source2 = "SmotionD" + Integer.toString(i - 1) + "Value";
+                    int id2 = getResources().getIdentifier(source2, "id", getPackageName());
+                    Smotion[i] = findViewById(id2);
+                    Smotion[i].setText(Integer.toString(character.AkcjeRuch[i]));
+
+                }
+            } else if (numberOfView == 2) {
+                abiLayout.setVisibility(View.VISIBLE);
+                rapierLayout.setVisibility(View.GONE);
+                swordLayout.setVisibility(View.GONE);
+            } else if (numberOfView == 0) {
+                abiLayout.setVisibility(View.GONE);
+                rapierLayout.setVisibility(View.VISIBLE);
+                swordLayout.setVisibility(View.GONE);
+
+                Button[] motion = new Button[4];
+                Button[] closeC = new Button[2];
+
+                closeC[0] = findViewById(R.id.cCombatAValue);
+                closeC[0].setText(Integer.toString(character.AkcjeZwarcie[0]));
+                closeC[1] = findViewById(R.id.cCombatDValue);
+                closeC[1].setText(Integer.toString(character.AkcjeZwarcie[1]));
+
+                motion[0] = findViewById(R.id.SmotionAValue);
+                motion[0].setText(Integer.toString(character.AkcjeRuch[0]));
+                for (int i = 1; i < motion.length; i++) {
+                    String source = "motionD" + Integer.toString(i - 1) + "Value";
+                    int id = getResources().getIdentifier(source, "id", getPackageName());
+                    motion[i] = findViewById(id);
+                    motion[i].setText(Integer.toString(character.AkcjeRuch[i]));
+                }
+            }
+        }
+    }
+    public void changeViewMenu(View view){
+        RelativeLayout characterLayout = findViewById(R.id.characterLayout);
+        Button thisButton = (Button) findViewById(R.id.viewButton);
+        if(thisButton.getTag()=="0"){
+            changeViev(0,false);
+        }
+           else {
+            thisButton.setTag("0");
+            final LinearLayout CVmenuLayout = new LinearLayout(this);
+            CVmenuLayout.setBackgroundColor(Color.parseColor("#f2eae3"));
+
+
+            RelativeLayout.LayoutParams savesLayoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            savesLayoutParams.addRule(RelativeLayout.ABOVE, R.id.bottomMenuBar);
+            savesLayoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
+            CVmenuLayout.setGravity(Gravity.CENTER_HORIZONTAL);
+            CVmenuLayout.setOrientation(LinearLayout.VERTICAL);
+            CVmenuLayout.setLayoutParams(savesLayoutParams);
+
+            Button[] buttons = new Button[4];
+            buttons[0] = new Button(this);
+            buttons[1] = new Button(this);
+            buttons[2] = new Button(this);
+            buttons[3] = new Button(this);
+
+            RelativeLayout.LayoutParams buttonsParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
+
+            int menuLayoutId = 22001;
+            CVmenuLayout.setId(menuLayoutId);
+            final Button exitButton = new Button(this);
+            int exitButtonid = 22002;
+            exitButton.setId(exitButtonid);
+
+            RelativeLayout.LayoutParams exitParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+            exitParams.addRule(RelativeLayout.ABOVE, menuLayoutId);
+            exitButton.setLayoutParams(exitParams);
+            exitButton.setBackgroundColor(Color.parseColor("#00ff0000"));
+
+
+            final Button exitButton1 = new Button(this);
+            int exitButtonid1 = 22003;
+            exitButton1.setId(exitButtonid1);
+
+            RelativeLayout.LayoutParams exitParams1 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+            exitParams1.addRule(RelativeLayout.ABOVE, R.id.bottomMenuBar);
+            exitParams1.addRule(RelativeLayout.RIGHT_OF, menuLayoutId);
+            exitButton1.setLayoutParams(exitParams1);
+            exitButton1.setBackgroundColor(Color.parseColor("#00ff0000"));
+
+
+            final Button exitButton2 = new Button(this);
+            int exitButtonid3 = 22004;
+            exitButton2.setId(exitButtonid3);
+            RelativeLayout.LayoutParams exitParams2 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+            exitParams2.addRule(RelativeLayout.ABOVE, R.id.bottomMenuBar);
+            exitParams2.addRule(RelativeLayout.LEFT_OF, menuLayoutId);
+            exitButton2.setLayoutParams(exitParams2);
+            exitButton2.setBackgroundColor(Color.parseColor("#00ff0000"));
+
+            buttons[0].setText("Rapier");
+            buttons[1].setText("Miecz");
+            buttons[2].setText("Umietnosci");
+            buttons[3].setText("Notka");
+
+            buttons[0].setLayoutParams(buttonsParams);
+            buttons[1].setLayoutParams(buttonsParams);
+            buttons[2].setLayoutParams(buttonsParams);
+            buttons[3].setLayoutParams(buttonsParams);
+
+            buttons[0].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    changeViev(0, true);
+                    RelativeLayout characterLayout = (RelativeLayout) findViewById(R.id.characterLayout);
+                    characterLayout.removeView(CVmenuLayout);
+                    characterLayout.removeView(exitButton);
+                    characterLayout.removeView(exitButton1);
+                    characterLayout.removeView(exitButton2);
+                    int saveLayout = 11001;
+                    int exitButton1 = 11002;
+                    int exitButton2 = 11003;
+                    int exitButton3 = 11004;
+
+                    characterLayout.removeView(findViewById(saveLayout));
+                    characterLayout.removeView(findViewById(exitButton1));
+                    characterLayout.removeView(findViewById(exitButton2));
+                    characterLayout.removeView(findViewById(exitButton3));
+
+                }
+            });
+            buttons[1].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    changeViev(1, true);
+                    RelativeLayout characterLayout = (RelativeLayout) findViewById(R.id.characterLayout);
+                    characterLayout.removeView(CVmenuLayout);
+                    characterLayout.removeView(exitButton);
+                    characterLayout.removeView(exitButton1);
+                    characterLayout.removeView(exitButton2);
+                    int saveLayout = 11001;
+                    int exitButton1 = 11002;
+                    int exitButton2 = 11003;
+                    int exitButton3 = 11004;
+
+                    characterLayout.removeView(findViewById(saveLayout));
+                    characterLayout.removeView(findViewById(exitButton1));
+                    characterLayout.removeView(findViewById(exitButton2));
+                    characterLayout.removeView(findViewById(exitButton3));
+
+                }
+            });
+            buttons[2].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    changeViev(2, true);
+                    RelativeLayout characterLayout = (RelativeLayout) findViewById(R.id.characterLayout);
+                    characterLayout.removeView(CVmenuLayout);
+                    characterLayout.removeView(exitButton);
+                    characterLayout.removeView(exitButton1);
+                    characterLayout.removeView(exitButton2);
+                    int saveLayout = 11001;
+                    int exitButton1 = 11002;
+                    int exitButton2 = 11003;
+                    int exitButton3 = 11004;
+
+                    characterLayout.removeView(findViewById(saveLayout));
+                    characterLayout.removeView(findViewById(exitButton1));
+                    characterLayout.removeView(findViewById(exitButton2));
+                    characterLayout.removeView(findViewById(exitButton3));
+
+                }
+            });
+            buttons[3].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    changeViev(3, true);
+                    RelativeLayout characterLayout = (RelativeLayout) findViewById(R.id.characterLayout);
+                    characterLayout.removeView(CVmenuLayout);
+                    characterLayout.removeView(exitButton);
+                    characterLayout.removeView(exitButton1);
+                    characterLayout.removeView(exitButton2);
+                    int saveLayout = 11001;
+                    int exitButton1 = 11002;
+                    int exitButton2 = 11003;
+                    int exitButton3 = 11004;
+
+                    characterLayout.removeView(findViewById(saveLayout));
+                    characterLayout.removeView(findViewById(exitButton1));
+                    characterLayout.removeView(findViewById(exitButton2));
+                    characterLayout.removeView(findViewById(exitButton3));
+
+                }
+            });
+
+            CVmenuLayout.addView(buttons[0]);
+            CVmenuLayout.addView(buttons[1]);
+            CVmenuLayout.addView(buttons[2]);
+            CVmenuLayout.addView(buttons[3]);
+
+            characterLayout.addView(CVmenuLayout);
+            characterLayout.addView(exitButton);
+            characterLayout.addView(exitButton1);
+            characterLayout.addView(exitButton2);
+            exitButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    RelativeLayout characterLayout = (RelativeLayout) findViewById(R.id.characterLayout);
+                    characterLayout.removeView(CVmenuLayout);
+                    characterLayout.removeView(exitButton);
+                    characterLayout.removeView(exitButton1);
+                    characterLayout.removeView(exitButton2);
+
+                    int saveLayout = 11001;
+                    int exitButton1 = 11002;
+                    int exitButton2 = 11003;
+                    int exitButton3 = 11004;
+
+                    characterLayout.removeView(findViewById(saveLayout));
+                    characterLayout.removeView(findViewById(exitButton1));
+                    characterLayout.removeView(findViewById(exitButton2));
+                    characterLayout.removeView(findViewById(exitButton3));
+
+
+                }
+            });
+            exitButton2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    RelativeLayout characterLayout = (RelativeLayout) findViewById(R.id.characterLayout);
+                    characterLayout.removeView(CVmenuLayout);
+                    characterLayout.removeView(exitButton);
+                    characterLayout.removeView(exitButton1);
+                    characterLayout.removeView(exitButton2);
+
+                    int saveLayout = 11001;
+                    int exitButton1 = 11002;
+                    int exitButton2 = 11003;
+                    int exitButton3 = 11004;
+
+                    characterLayout.removeView(findViewById(saveLayout));
+                    characterLayout.removeView(findViewById(exitButton1));
+                    characterLayout.removeView(findViewById(exitButton2));
+                    characterLayout.removeView(findViewById(exitButton3));
+                }
+            });
+            exitButton1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    RelativeLayout characterLayout = (RelativeLayout) findViewById(R.id.characterLayout);
+                    characterLayout.removeView(CVmenuLayout);
+                    characterLayout.removeView(exitButton);
+                    characterLayout.removeView(exitButton1);
+                    characterLayout.removeView(exitButton2);
+
+                    int saveLayout = 11001;
+                    int exitButton1 = 11002;
+                    int exitButton2 = 11003;
+                    int exitButton3 = 11004;
+
+                    characterLayout.removeView(findViewById(saveLayout));
+                    characterLayout.removeView(findViewById(exitButton1));
+                    characterLayout.removeView(findViewById(exitButton2));
+                    characterLayout.removeView(findViewById(exitButton3));
+
+                }
+            });
+            int saveLayout = 11001;
+            exitButtonid1 = 11002;
+            int exitButtonid2 = 11003;
+            exitButtonid3 = 11004;
+
+            characterLayout.removeView(findViewById(saveLayout));
+            characterLayout.removeView(findViewById(exitButtonid1));
+            characterLayout.removeView(findViewById(exitButtonid2));
+            characterLayout.removeView(findViewById(exitButtonid3));
+        }
+
     }
     public void saveCharacter(View view) {
 
@@ -619,4 +953,6 @@ public class postac1 extends AppCompatActivity {
 
         characterInitiator(view);
     }
+
+
 }
