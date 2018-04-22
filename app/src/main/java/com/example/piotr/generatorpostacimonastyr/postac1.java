@@ -197,63 +197,61 @@ public class postac1 extends AppCompatActivity {
     }
     public void QLSavesMenu(View view){
 
+        if(quickLoadList.size()>0) {
+            Button thisButton = (Button) findViewById(R.id.QLmenu);
+            thisButton.setEnabled(false);
 
-        RelativeLayout characterLayout = findViewById(R.id.characterLayout);
-        final LinearLayout savesLayout = new LinearLayout(this);
-
-
-
-        RelativeLayout.LayoutParams savesLayoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
-        savesLayoutParams.addRule(RelativeLayout.ABOVE, R.id.bottomMenuBar);
-        savesLayoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        savesLayout.setOrientation(LinearLayout.VERTICAL);
-        savesLayout.setLayoutParams(savesLayoutParams);
+            RelativeLayout characterLayout = findViewById(R.id.characterLayout);
+            final LinearLayout savesLayout = new LinearLayout(this);
+            savesLayout.setBackgroundColor(Color.parseColor("#f2eae3"));
 
 
+            RelativeLayout.LayoutParams savesLayoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            savesLayoutParams.addRule(RelativeLayout.ABOVE, R.id.bottomMenuBar);
+            savesLayoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
+            savesLayout.setOrientation(LinearLayout.VERTICAL);
+            savesLayout.setLayoutParams(savesLayoutParams);
 
-        RelativeLayout[] recordLayout = new RelativeLayout[quickLoadList.size()];
-        Button[] deleteButton = new Button[quickLoadList.size()];
-        Button[] loadButton = new Button[quickLoadList.size()];
+            RelativeLayout[] recordLayout = new RelativeLayout[quickLoadList.size()];
+            Button[] deleteButton = new Button[quickLoadList.size()];
+            Button[] loadButton = new Button[quickLoadList.size()];
 
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(this.getResources().getDisplayMetrics().widthPixels/2, ViewGroup.LayoutParams.WRAP_CONTENT);
-        RelativeLayout.LayoutParams deleteButtonParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        RelativeLayout.LayoutParams loadButtonParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(this.getResources().getDisplayMetrics().widthPixels / 2, ViewGroup.LayoutParams.WRAP_CONTENT);
+            RelativeLayout.LayoutParams deleteButtonParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            RelativeLayout.LayoutParams loadButtonParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
-        deleteButtonParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-        loadButtonParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
-        Toast.makeText(this, Integer.toString(quickLoadList.size()), Toast.LENGTH_SHORT).show();
-
-
-        int savesLayoutid = 11001;
-        final Button exitButton =new Button(this);
-        RelativeLayout.LayoutParams exitParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-        exitParams.addRule(RelativeLayout.ABOVE,savesLayoutid);
-        exitButton.setLayoutParams(exitParams);
-        exitButton.setBackgroundColor(Color.parseColor("#CCFF0000"));
+            deleteButtonParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+            loadButtonParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
 
 
-
-        final Button exitButton1 =new Button(this);
-        RelativeLayout.LayoutParams exitParams1 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-        exitParams1.addRule(RelativeLayout.ABOVE,R.id.bottomMenuBar);
-        exitParams1.addRule(RelativeLayout.RIGHT_OF,savesLayoutid);
-        exitButton1.setLayoutParams(exitParams1);
-        exitButton1.setBackgroundColor(Color.parseColor("#CCFF0000"));
-
+            int savesLayoutid = 11001;
+            final Button exitButton = new Button(this);
+            RelativeLayout.LayoutParams exitParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+            exitParams.addRule(RelativeLayout.ABOVE, savesLayoutid);
+            exitButton.setLayoutParams(exitParams);
+            exitButton.setBackgroundColor(Color.parseColor("#00ff0000"));
 
 
-        final Button exitButton2 =new Button(this);
-        RelativeLayout.LayoutParams exitParams2 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-        exitParams2.addRule(RelativeLayout.ABOVE,R.id.bottomMenuBar);
-        exitParams2.addRule(RelativeLayout.LEFT_OF,savesLayoutid);
-        exitButton2.setLayoutParams(exitParams2);
-        exitButton2.setBackgroundColor(Color.parseColor("#CCFF0000"));
+            final Button exitButton1 = new Button(this);
+            RelativeLayout.LayoutParams exitParams1 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+            exitParams1.addRule(RelativeLayout.ABOVE, R.id.bottomMenuBar);
+            exitParams1.addRule(RelativeLayout.RIGHT_OF, savesLayoutid);
+            exitButton1.setLayoutParams(exitParams1);
+            exitButton1.setBackgroundColor(Color.parseColor("#00ff0000"));
 
 
-        for(int i =0;i<quickLoadList.size();i++) {
+            final Button exitButton2 = new Button(this);
+            RelativeLayout.LayoutParams exitParams2 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+            exitParams2.addRule(RelativeLayout.ABOVE, R.id.bottomMenuBar);
+            exitParams2.addRule(RelativeLayout.LEFT_OF, savesLayoutid);
+            exitButton2.setLayoutParams(exitParams2);
+            exitButton2.setBackgroundColor(Color.parseColor("#00ff0000"));
+
+
+            for (int i = 0; i < quickLoadList.size(); i++) {
 
                 recordLayout[i] = new RelativeLayout(this);
-                recordLayout[i].setId(4000+i);
+                recordLayout[i].setId(4000 + i);
                 recordLayout[i].setLayoutParams(params);
 
                 String data = (String) quickLoadList.get(i);
@@ -271,10 +269,13 @@ public class postac1 extends AppCompatActivity {
                         character.Wczytaj((String) quickLoadList.get(number));
 
                         RelativeLayout characterLayout = (RelativeLayout) findViewById(R.id.characterLayout);
+                        Button thisButton = (Button) findViewById(R.id.QLmenu);
+                        thisButton.setEnabled(true);
                         characterLayout.removeView(savesLayout);
-                       characterLayout.removeView(exitButton);
+                        characterLayout.removeView(exitButton);
                         characterLayout.removeView(exitButton1);
-                       characterLayout.removeView(exitButton2);
+                        characterLayout.removeView(exitButton2);
+
 
                         characterInitiator(view.getRootView());
 
@@ -283,14 +284,22 @@ public class postac1 extends AppCompatActivity {
                 deleteButton[i] = new Button(this);
                 deleteButton[i].setLayoutParams(deleteButtonParams);
                 deleteButton[i].setText("usuń");
-                 deleteButton[i].setId(3000 + i);
-                 deleteButton[i].setOnClickListener(new View.OnClickListener() {
+                deleteButton[i].setId(3000 + i);
+                deleteButton[i].setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         int number = view.getId();
                         number -= 3000;
                         quickLoadList.remove(number);
                         quickLoadNumber = 0;
+
+                        RelativeLayout characterLayout = (RelativeLayout) findViewById(R.id.characterLayout);
+                        characterLayout.removeView(savesLayout);
+                        characterLayout.removeView(exitButton);
+                        characterLayout.removeView(exitButton1);
+                        characterLayout.removeView(exitButton2);
+                        Button menuButton = (Button) findViewById(R.id.QLmenu);
+                        menuButton.setEnabled(true);
                         QLSavesMenu(view.getRootView());
                     }
                 });
@@ -299,49 +308,55 @@ public class postac1 extends AppCompatActivity {
 
                 savesLayout.addView(recordLayout[i]);
 
-        }
+            }
 
             savesLayout.setId(savesLayoutid);
             characterLayout.addView(savesLayout);
 
 
-        characterLayout.addView(exitButton);
-        characterLayout.addView(exitButton1);
-        characterLayout.addView(exitButton2);
-        exitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                RelativeLayout characterLayout = (RelativeLayout) findViewById(R.id.characterLayout);
-                characterLayout.removeView(savesLayout);
-                characterLayout.removeView(exitButton);
-                characterLayout.removeView(exitButton1);
-                characterLayout.removeView(exitButton2);
+            characterLayout.addView(exitButton);
+            characterLayout.addView(exitButton1);
+            characterLayout.addView(exitButton2);
+            exitButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    RelativeLayout characterLayout = (RelativeLayout) findViewById(R.id.characterLayout);
+                    characterLayout.removeView(savesLayout);
+                    characterLayout.removeView(exitButton);
+                    characterLayout.removeView(exitButton1);
+                    characterLayout.removeView(exitButton2);
+                    Button menuButton = (Button) findViewById(R.id.QLmenu);
+                    menuButton.setEnabled(true);
 
-            }
-        });
-        exitButton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                RelativeLayout characterLayout = (RelativeLayout) findViewById(R.id.characterLayout);
-                characterLayout.removeView(savesLayout);
-                characterLayout.removeView(exitButton);
-                characterLayout.removeView(exitButton1);
-                characterLayout.removeView(exitButton2);
-            }
-        });
-        exitButton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                RelativeLayout characterLayout = (RelativeLayout) findViewById(R.id.characterLayout);
-                characterLayout.removeView(savesLayout);
-                characterLayout.removeView(exitButton);
-                characterLayout.removeView(exitButton1);
-                characterLayout.removeView(exitButton2);
-            }
-        });
-
-
-
+                }
+            });
+            exitButton2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    RelativeLayout characterLayout = (RelativeLayout) findViewById(R.id.characterLayout);
+                    characterLayout.removeView(savesLayout);
+                    characterLayout.removeView(exitButton);
+                    characterLayout.removeView(exitButton1);
+                    characterLayout.removeView(exitButton2);
+                    Button menuButton = (Button) findViewById(R.id.QLmenu);
+                    menuButton.setEnabled(true);
+                }
+            });
+            exitButton1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    RelativeLayout characterLayout = (RelativeLayout) findViewById(R.id.characterLayout);
+                    characterLayout.removeView(savesLayout);
+                    characterLayout.removeView(exitButton);
+                    characterLayout.removeView(exitButton1);
+                    characterLayout.removeView(exitButton2);
+                    Button menuButton = (Button) findViewById(R.id.QLmenu);
+                    menuButton.setEnabled(true);
+                }
+            });
+        }
+        else
+            Toast.makeText(this, "Nie ma zapisanych postaci", Toast.LENGTH_SHORT).show();
     }
 
     public void generate(View view){
