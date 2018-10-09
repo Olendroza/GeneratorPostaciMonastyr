@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@android:style/Theme.NoTitleBar"
-    tools:context="com.example.piotr.generatorpostacimonastyr.postac1">
+    tools:context="com.example.piotr.generatorpostacimonastyr.postac1"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
 
 
     <FrameLayout
@@ -36,20 +38,16 @@
                         >
 
 
-                        <TextView
-                            android:id="@+id/tytul"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Tytul"
-                            android:textColor="#FFFF"
-                            android:layout_alignParentTop="true"/><!--title-->
-                        <TextView
+                        <Button   android:layout_marginTop="15dp"
                             android:id="@+id/imie"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="#00ff0000"
                             android:text="Imie Postaci"
-                            android:textColor="#FFFF"
-                            android:layout_below="@+id/tytul"/><!--name-->
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp"
+                            android:onClick="changeName"/><!--name-->
 
                         <LinearLayout
 
@@ -346,7 +344,7 @@
                                 android:layout_height="wrap_content"
                                 android:id="@+id/abilitiesLayout"
                                 android:weightSum="10"
-                                android:visibility="gone">
+                                >
                                 <LinearLayout
                                     android:orientation="vertical"
                                     android:layout_width="0dp"
@@ -1137,7 +1135,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/swordLayout"
-                                android:weightSum="10">
+                                android:weightSum="10"
+                                android:visibility="gone">
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1394,6 +1393,28 @@
                                     </RelativeLayout>
                                 </LinearLayout>
                             </LinearLayout><!--sword-->
+                            <LinearLayout
+                                android:id="@+id/noteLayout"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Notka"/>
+                                <Button
+                                    android:id="@+id/note"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#00ff0000"
+                                    android:text="notka"
+                                    android:textColor="#FFFFFF"
+                                    android:onClick="changeNote"
+                                    android:layout_marginBottom="24dp"/>
+
+                            </LinearLayout>
 
                         </FrameLayout><!-- frame for abilities, rapier moves and sword moves-->
 
@@ -1420,40 +1441,36 @@
                         android:tag="0"
                         android:onClick="changeViewMenu"
                         android:text="Widok" />
-                    <Button
-                        android:id="@+id/QLsave"
-                        android:layout_toRightOf="@id/viewButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="QL zapisz"
-                        android:onClick="saveToQuickLoad"/>
-                    <Button
-                        android:id="@+id/QLdelete"
-                        android:layout_toRightOf="@id/QLsave"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="QL usuń"/>
+
                     <Button
                         android:id="@+id/QLleft"
-                        android:layout_toRightOf="@id/QLdelete"
+                        android:layout_toLeftOf="@id/QLmenu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="lewo"
+                        android:text="&lt;"
                         android:onClick="QLleft"/>
                     <Button
-                        android:id="@+id/QLright"
-                        android:layout_toRightOf="@id/QLleft"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="prawo"
-                        android:onClick="QLRight"/>
-                    <Button
                         android:id="@+id/QLmenu"
-                        android:layout_toRightOf="@id/QLright"
+                        android:layout_centerInParent="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="menu" />
+                        android:text="Szybki zapis \n Nie zapisano"
+                        android:onClick="QuickLoad"/>
+                    <Button
+                        android:id="@+id/QLright"
+                        android:layout_toRightOf="@id/QLmenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="&gt;"
+                        android:onClick="QLRight"/>
 
+                    <Button
+                        android:id="@+id/loadMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/saveButton"
+                        android:text="wczytaj"
+                        android:onClick="loadCharacter"/>
                     <Button
                         android:id="@+id/saveButton"
                         android:layout_width="wrap_content"
@@ -1462,13 +1479,6 @@
                         android:onClick="saveCharacter"
                         android:tag="2"
                         android:text="Zapisz" />
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:onClick="generate"
-                        android:tag="2"
-                        android:text="generuj" />
                 </RelativeLayout>
 
             </RelativeLayout> <!--stores scroll view and bottom menu bar-->

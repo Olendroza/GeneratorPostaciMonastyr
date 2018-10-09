@@ -21,7 +21,8 @@
         <activity android:name=".postac3" />
         <activity android:name=".postac4" />
         <activity android:name=".startup" />
-        <activity android:name=".load"></activity>
+        <activity android:name=".load" />
+        <activity android:name=".text"></activity>
     </application>
 
 </manifest>

@@ -1,5 +1,6 @@
 package com.example.piotr.generatorpostacimonastyr;
 
+import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.ContentResolver;
@@ -22,6 +23,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.Message;
 import android.os.UserHandle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -104,10 +106,14 @@ public class Menu extends AppCompatActivity {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+        SharedPreferences sharedPref = getSharedPreferences("saves",MODE_PRIVATE);
+        String savedChars = sharedPref.getString("savedCharacters", "");
+
         Intent intent = new Intent();
         intent.setClass(Menu.this, postac1.class);
         intent.putExtra("m", nameM);
         intent.putExtra("f", nameF);
+        intent.putExtra("savedCharacters",savedChars);
         intent.putExtra("loadedChar", characterToLoad);
         if(characterToLoad!="")
             characterToLoad="";
@@ -201,7 +207,7 @@ public class Menu extends AppCompatActivity {
             recordLayout[i].addView(names[i]);
             recordLayout[i].addView(deleteButton[i]);
             recordLayout[i].addView(loadButton[i]);
-            if(name[0]!="")
+            if(!name[0].equals(""))
             {
                 linearLayout.addView(recordLayout[i]);
             }
@@ -217,6 +223,7 @@ public class Menu extends AppCompatActivity {
         backButton.setText("Wyjdź");
         if(menuLayout.getVisibility()==View.VISIBLE)
         {
+            this.finishAffinity();
             finishAndRemoveTask();
         }
         else{
@@ -224,4 +231,6 @@ public class Menu extends AppCompatActivity {
             linearLayout.setVisibility(View.GONE);
         }
     }
+
+
 }

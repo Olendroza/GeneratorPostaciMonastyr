@@ -26,6 +26,7 @@ public class Postac {
         int[] AkcjeRapierObrona = new int[4];
         int[] AkcjeMieczAtak = new int [4];
         int[] AkcjeMieczObrona = new int[3];
+        String notka ="pusta";
 
         public Postac(String imionaM, String imionaZ) {
             Random generator= new Random();
@@ -180,6 +181,7 @@ public class Postac {
         for(int i=0;i<3 ;i++) {
             record+=this.AkcjeMieczObrona[i]+",";
         }
+        record+=notka;
         record+=";";
         return record;
     }
@@ -216,6 +218,7 @@ public class Postac {
         for(int i=0;i<3 ;i++) {
             this.AkcjeMieczObrona[i]=Integer.parseInt(dane[59+i]);
         }
+        this.notka = dane[62];
     }
 
     }
